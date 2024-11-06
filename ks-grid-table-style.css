@@ -1,0 +1,66 @@
+/* list_table */
+.ks-grid-table-list_table .ks-grid-table-head {
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 2;
+}
+
+.ks-grid-table-list_table .ks-grid-table-row {
+    height: 40px;
+}
+
+.ks-grid-table-list_table .ks-grid-table-row.border-bottom {
+    border-bottom: 1px solid #d8d9d9;
+    border-right: 1px dotted #b1b3b3;
+    height: 40px;
+}
+
+.ks-grid-table-list_table .ks-grid-table-head .ks-grid-table-row {
+    border-bottom: 1px solid #d8d9d9;
+}
+
+.ks-grid-table-list_table .ks-grid-table-cell-border-left {
+    border-right: 1px dotted #b1b3b3;
+    position: absolute;
+    height: 100%;
+    margin-right: 7px;
+}
+
+.ks-grid-table-list_table .ks-grid-table-head .ks-grid-table-head-cell-no_border .ks-grid-table-head-cell-border-left {
+    border-left: 1px solid #b1b3b3;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+}
+
+.ks-grid-table-list_table .bottom_border {
+    border-bottom: 1px solid #d8d9d9;
+    border-right: 1px dotted #b1b3b3;
+}
+
+.ks-grid-table-list_table .ks-grid-table-head .ks-grid-table-cell {
+    border-right: unset;
+    color: #000000;
+}
+
+.ks-grid-table-list_table .ks-grid-table-head .ks-grid-table-head-cell-border-left {
+    border-left: 1px solid #b1b3b3;
+    position: absolute;
+    top: 20%;
+    bottom: 0;
+}
+
+.ks-grid-table-list_table .ks-grid-table-head .ks-grid-table-row {
+    height: 40px;
+}
+
+.ks-grid-table-list_table .ks-grid-table-cell {
+    color: #000;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.ks-grid-table-list_table .ks-grid-table-content .ks-grid-table-cell {
+    overflow: hidden;
+}

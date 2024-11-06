@@ -1,0 +1,21 @@
+"KsAcademyHeadcountGridTable_init": >
+  {"MDX":"
+        WITH
+        SET [Employee:Employee:}rollup_1] AS {[Employee].[Employee].[Employee 1],[Employee].[Employee].[Employee 2],[Employee].[Employee].[Employee 3],[Employee].[Employee].[Employee 4],[Employee].[Employee].[Employee 5],[Employee].[Employee].[Employee 6],[Employee].[Employee].[Employee 7],[Employee].[Employee].[Employee 8],[Employee].[Employee].[Employee 9]}
+        MEMBER [Employee].[Employee].[}rollup_1] AS AGGREGATE({[Employee:Employee:}rollup_1]})
+        SELECT
+           {[Lineitem Headcount].[Lineitem Headcount].[Base Salary],[Lineitem Headcount].[Lineitem Headcount].[FTE],[Lineitem Headcount].[Lineitem Headcount].[Bonus]}
+          ON COLUMNS ,
+           {[Organization Unit].[Organization Unit].[Business Unit 1],[Organization Unit].[Organization Unit].[Business Unit 2],[Organization Unit].[Organization Unit].[Business Unit 3],[Organization Unit].[Organization Unit].[Business Unit 4],[Organization Unit].[Organization Unit].[Business Unit 5]}
+          ON ROWS
+        FROM [Headcount]
+        WHERE
+          (
+           [Version].[Version].[Actual],
+           [Period].[Period].[2024],
+           [Measure Headcount].[Measure Headcount].[Base],
+           [Employee].[Employee].[}rollup_1]
+          )
+   "}
+
+
