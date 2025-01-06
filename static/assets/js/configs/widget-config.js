@@ -2,38 +2,153 @@
 'use strict'
 WidgetConfig = {
 
-KsAcademyHeadCount:{
-    "id": "KsAcademyHeadCount",
+KsAcademyHeadcount:{
+    "id": "KsAcademyHeadcount",
     "type": PageWidget,
     "widgets": [
         {
-            "id": "KsAcademyHeadCountGridRow1",
+            "id": "KsAcademyHeadcountGridRow1",
             "type": GridRowWidget,
             "height": "10%",
             "width": "100%",
             "skin": "bottom_border_main3",
             "widgets": [
                 {
-                    "id": "KsAcademyHeadCountGridRow1Cell1",
+                    "id": "KsAcademyHeadcountGridRow1Cell1",
                     "type": GridCellWidget,
                     "width": "20%",
                     "alignment": "center-left",
                     "marginLeft": 20,
                     "widgets": [
                         {
-                            "id": "KsAcademyHeadCountGridRow1Cell1Button",
+                            "id": "KsAcademyHeadcountGridRow1Cell1Button",
                             "type": ButtonWidget,
                             "icon": "icon-arrow-back",
                             "iconFontSize": 20,
                             "iconColor": "#000"
                         },
                         {
-                            "id": "KsAcademyHeadCountGridRow1Cell1Text",
+                            "id": "KsAcademyHeadcountGridRow1Text",
                             "type": TextWidget,
                             "skin": "menu2",
-                            "title": "HeadCount",
+                            "title": "Headcount",
                             "titleFontSize": 45,
                             "titleFontColor": "#000"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "KsAcademyHeadcountGridTable",
+            "type": GridTableWidget,
+            "skin": "list_table",
+            "width": "25%",
+            "marginTop": 20,
+            "widgets": [
+                {
+                    "id": "GridTableHeaderRow",
+                    "type": GridTableHeaderRowWidget,
+                    "widgets": [
+                        {
+                            "id": "GridTableHeaderRowCell0",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "10%",
+                            "alignment": "center-left",
+                            "widgets": [
+                                {
+                                    "id": "GridTableHeaderRowCell0Text",
+                                    "type": TextWidget,
+                                    "title": "Group Name",
+                                    "titleFontWeight": 600,
+                                    "paddingLeft": 10
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GridTableHeaderRowCell1",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "alignment": "center-left",
+                            "widgets": [
+                                {
+                                    "id": "GridTableHeaderRowCell1Text",
+                                    "type": TextWidget,
+                                    "title": "Base Salary",
+                                    "titleFontWeight": 600,
+                                    "paddingLeft": 10
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GridTableHeaderRowCell2",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "alignment": "center-left",
+                            "widgets": [
+                                {
+                                    "id": "GridTableHeaderRowCell2Text",
+                                    "type": TextWidget,
+                                    "title": "FTE",
+                                    "titleFontWeight": 600,
+                                    "paddingLeft": 10
+                                }
+                            ]
+                        },
+                        {
+                            "id": "GridTableHeaderRowCell3",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "alignment": "center-left",
+                            "widgets": [
+                                {
+                                    "id": "GridTableHeaderRowCell3Text",
+                                    "type": TextWidget,
+                                    "title": "Bonus",
+                                    "titleFontWeight": 600,
+                                    "paddingLeft": 10
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "GridTableCell0",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "GridTableCell0Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "GridTableCell1",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "GridTableCell1Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "GridTableCell2",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "GridTableCell2Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "GridTableCell3",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "GridTableCell3Text",
+                            "type": TextWidget
                         }
                     ]
                 }
@@ -59,13 +174,12 @@ KsAcademyMainPage:{
                     "alignment": "center-left",
                     "widgets": [
                         {
-                            "id": "KsAcademyMainPageGridRow1Cell1Text",
+                            "id": "KsAcademyMainPageGridRow1Text",
                             "type": TextWidget,
                             "skin": "menu2",
-                            "title": "Ks Academy",
+                            "title": "KsAcademy",
                             "titleFontSize": 45,
-                            "titleFontColor": "#000",
-                            "marginLeft": 20
+                            "titleFontColor": "#000"
                         }
                     ]
                 }
@@ -91,8 +205,8 @@ KsAcademyMainPage:{
                         {
                             "id": "KsAcademyMainPageGridRow2Cell2Button",
                             "type": ButtonWidget,
-                            "height": 145,
                             "width": 145,
+                            "height": 145,
                             "icon": "icon-product-groups",
                             "skin": "main_blue"
                         }
@@ -121,7 +235,6 @@ KsAcademyMainPage:{
                             "type": TextWidget,
                             "title": "Headcount",
                             "titleAlignment": "center",
-                            "titleFontSize": 16,
                             "titleFontColor": "#000",
                             "skin": "menu"
                         }

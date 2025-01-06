@@ -20,12 +20,46 @@
     margin-left: -15px;
 }
 
-.ks-text-menu2 .ks -text-body{
+.ks-text-menu2 .ks-text-body{
     font-weight: bold;
     margin-bottom: 5px;
     margin-left: 8px;
 }
 
 .ks-text-menu2 .ks-text-inner{
-    margin-left: 10px;
+    margin-left: 18px;
+}
+
+/*badmin panle text*/
+.ks-text-admin_panel .ks-text-inner {
+    height: 40px;
+    padding-top: 2px;
+}
+
+.ks-text-admin_panel .ks-text-title {
+    font-weight: normal;
+    font-size: 15px;
+    padding-top: 11px;
+}
+
+
+/* delta_report_data*/
+.ks-text-delta_report_data .ks-text-inner {
+    height: 40px;
+}
+
+.ks-text-delta_report_data .ks-text-title {
+    padding-top: 13px;
+    font-weight: normal;
+    font-size: 13px;
+    justify-content: end;
+}
+
+.ks-text-delta_report_data .ks-text-title-input {
+    font-weight: bold;
+    font-size: 14px;
+    border-width: 0px;
+    width: 80px;
+    justify-content: end;
+    color: #0B41CD;
 }
