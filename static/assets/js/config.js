@@ -61,6 +61,22 @@ app.pingTime = new Date().getTime();
     
 
     
+        app['connectedSeederUrl'] = 'https://dev.knowledgeseed.ch:9610/seeder';
+    
+
+    
+
+    
+
+    
+        app['connectedSeederApplicationVersion'] = 'ksacademy_2.0';
+    
+
+    
+
+    
+
+    
         app['instance'] = 'ksacademy';
     
 
@@ -89,7 +105,7 @@ app.pingTime = new Date().getTime();
     
 
     
-        app['version'] = '09CE38';
+        app['version'] = 'E56A75';
     
 
     

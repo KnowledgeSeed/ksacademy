@@ -1,0 +1,117 @@
+.ks-dropbox-edit .ks-dropbox-field {
+    border-radius: 8px;
+    border: 1px solid #B1B3B3;
+    height: 40px;
+}
+
+.ks-dropbox-edit .ks-dropbox-title {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-left: 6px
+}
+
+.ks-dropbox-edit .ks-dropbox-input {
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.ks-dropbox-edit .ks-dropbox-input::-webkit-input-placeholder {
+    color: #000000;
+}
+
+.ks-dropbox-edit .ks-dropbox-input::-moz-placeholder {
+    color: #000000;
+}
+
+.ks-dropbox-edit .ks-dropbox-input:-ms-input-placeholder {
+    color: #000000;
+}
+
+.ks-dropbox-edit .ks-dropbox-input:-moz-placeholder {
+    color: #000000;
+}
+
+.ks-dropbox-edit .ks-dropbox-icon {
+    border-radius: 4px;
+    height: 40px;
+    width: 40px;
+    display: block;
+}
+
+.ks-dropbox-edit .ks-dropbox-icon:after {
+    border-top: 7px solid #78909C;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+
+.ks-dropbox-edit .ks-dropbox-panel {
+    border-radius: 8px;
+    margin-top: 2px;
+    padding: 2px;
+    box-shadow: rgb(203 212 220) 0px 7px 10px;
+    background-color: #fff;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item {
+    border-radius: 4px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item.on {
+    background-color: #ffffff;
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item-separator {
+    width: 10px;
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item-text {
+    color: #000;
+    margin-left: -20px;
+    font-size: 14px;
+
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item-icon,
+.ks-dropbox-edit .ks-dropbox-panel-item-separator {
+    display: block;
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item-checkbox {
+    display: none;
+}
+
+
+.ks-dropbox-edit .ks-dropbox-panel-item:hover {
+    background-color: #FF760033;
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item.on:hover {
+    background-color: #FF760033;
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item .ks-dropbox-panel-item-icon span:after {
+    padding-right: 10px;
+    font-family: 'analogic', serif !important;
+    content: "";
+    padding-left: 37px;
+    color: #FFFFFF;
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item .ks-dropbox-panel-item-icon span:after:hover {
+    color: rgba(220, 235, 250, 0.5);
+}
+
+.ks-dropbox-edit .ks-dropbox-panel-item.on .ks-dropbox-panel-item-icon span:after {
+    font-family: 'analogic' !important;
+    content: "\e9d0";
+    padding-right: 10px;
+    font-size: 40px;
+    padding-left: 0px;
+    color: #FF7600;
+}

@@ -7,5 +7,7 @@
     "target": "https://dev.knowledgeseed.ch:5125/ksacademyapi"
   },
   "mainPage": "KsAcademyMainPage",
-  "analogicApiAuthenticationMode": "unsecured"
+  "analogicApiAuthenticationMode": "unsecured",
+  "connectedSeederUrl": "https://dev.knowledgeseed.ch:9610/seeder",
+  "connectedSeederApplicationVersion": "ksacademy_2.0"
 }

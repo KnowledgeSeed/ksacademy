@@ -12,7 +12,7 @@
         WHERE
           (
            [Version].[Version].[Actual],
-           [Period].[Period].[2024],
+           [Period].[Period].[$year],
            [Measure Headcount].[Measure Headcount].[Base],
            [Employee].[Employee].[}rollup_1]
           )

@@ -40,6 +40,23 @@ KsAcademyHeadcount:{
             ]
         },
         {
+            "id": "KsAcademyHeadcountGridRow2",
+            "type": GridRowWidget,
+            "widgets": [
+                {
+                    "id": "KsAcademyHeadcountGridRow2Cell1",
+                    "type": GridCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyHeadcountGridRow2Cell1Dropbox",
+                            "type": DropBoxWidget,
+                            "skin": "edit"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "KsAcademyHeadcountGridTable",
             "type": GridTableWidget,
             "skin": "list_table",

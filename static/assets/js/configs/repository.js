@@ -7,13 +7,30 @@ KsAcademyHeadcountGridRow1Cell1Button:{
         Api.openPage('KsAcademyMainPage')
     }
 },
+KsAcademyHeadcountGridRow2Cell1Dropbox:{
+     init(){
+        return{
+            items:[
+                {name:"2024", on: true},
+                {name: "2025"},
+                {name: "2026"}
+            ]
+        }
+    },
+     choose(){
+        Api.forceRefresh('KsAcademyHeadcountGridTable');
+        Utils.setWidgetValue('systemValueSelectedYear', v('KsAcademyHeadcountGridRow2Cell1Dropbox').value)
+    }
+},
 KsAcademyHeadcountGridTable:{
     init: {
         url: (db) => `/api/v1/ExecuteMDX?$expand=Cells($select=Ordinal,FormattedValue,Consolidated;$expand=Members($select=Name, Attributes/UIName, Attributes/UILevel))`,
         type: "POST",
         server: true,
         body: (db) => {
-                return {};
+                return {
+                    year : v('systemValueSelectedYear')
+                };
             },
         parsingControl: {
             type: 'script',
@@ -63,11 +80,6 @@ KsAcademyHeadcountGridTable:{
                     };
                 }
         }
-    }
-},
-KsAcademyMainPageGridRow2Cell2Button:{
-     launch(){
-        Api.openPage('KsAcademyHeadcount')
     }
 }
 };
