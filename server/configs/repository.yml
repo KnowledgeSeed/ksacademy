@@ -1,6 +1,24 @@
 
 
 
+"KsAcademyHeadcountGridRow2aCell1Dropbox_init": >
+  {"MDX":"
+     SELECT
+           {[Measure Headcount].[Measure Headcount].[Value]}
+          ON COLUMNS ,
+           {TM1SUBSETALL([Organization Unit].[Organization Unit])}
+          ON ROWS
+        FROM [Headcount]
+        WHERE
+          (
+           [Period].[Period].[2024],
+           [Version].[Version].[Actual],
+           [Lineitem Headcount].[Lineitem Headcount].[Total Cost],
+           [Employee].[Employee].[Employee 1]
+          )
+     "}
+
+
 "KsAcademyHeadcountGridTable_init": >
   {"MDX":"
         WITH
@@ -19,6 +37,15 @@
            [Measure Headcount].[Measure Headcount].[$value],
            [Employee].[Employee].[}rollup_1]
           )
+   "}
+
+
+"BusinessUnitGridTable_init": >
+  {"MDX":"
+     SELECT {DRILLDOWNMEMBER({StrToSet(\"{[Period].[Period].[2024]}\")},
+     {[Period].[Period].[2024]})} ON COLUMNS, NON EMPTY {StrToSet(\"{[Employee].[Employee].[BU1]}\")}
+     ON ROWS FROM [Headcount] WHERE ([Version].[Version].[Forecast], [Organization Unit].[Organization Unit].[Business Unit 1],
+     [Lineitem Headcount].[Lineitem Headcount].[FTE], [Measure Headcount].[Measure Headcount].[Value])
    "}
 
 

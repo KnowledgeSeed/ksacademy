@@ -55,6 +55,17 @@ KsAcademyHeadcount:{
                     ]
                 },
                 {
+                    "id": "KsAcademyHeadcountGridRow2aCell1",
+                    "type": GridCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyHeadcountGridRow2aCell1Dropbox",
+                            "type": DropBoxWidget,
+                            "skin": "edit"
+                        }
+                    ]
+                },
+                {
                     "id": "KsAcademyHeadcountGridRow2Cell2",
                     "type": GridCellWidget,
                     "widgets": [
@@ -74,6 +85,11 @@ KsAcademyHeadcount:{
                                     "id": "KsAcademyHeadcountGridRow2Cell2SegmentedItem2",
                                     "type": SegmentedControlItemWidget,
                                     "skin": "segmented-right"
+                                },
+                                {
+                                    "id": "KsAcademyHeadcountGridRow2Cell2SegmentedItem3",
+                                    "type": SegmentedControlItemWidget,
+                                    "skin": "segmented-right"
                                 }
                             ]
                         }
@@ -87,7 +103,7 @@ KsAcademyHeadcount:{
             "skin": "list_table",
             "width": "25%",
             "marginTop": 20,
-            "visible": true,
+            "visible": false,
             "widgets": [
                 {
                     "id": "GridTableHeaderRow",
@@ -192,6 +208,326 @@ KsAcademyHeadcount:{
                         {
                             "id": "GridTableCell3Text",
                             "type": TextWidget
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "BusinessUnitGridTable",
+            "type": GridTableWidget,
+            "skin": "list_table",
+            "widgets": [
+                {
+                    "id": "BusinessUnitGridTableCell0",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell0Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell1",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell1Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell2",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell2Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell3",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell3Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell4",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell4Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell5",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell5Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell6",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell6Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell7",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell7Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell8",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell8Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell9",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell9Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell10",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell10Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell11",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell11Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell12",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell12Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableCell13",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableCell13Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "BusinessUnitGridTableHeaderRow",
+                    "type": GridTableHeaderRowWidget,
+                    "widgets": [
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell0",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "10%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell0Text",
+                                    "type": TextWidget
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell1",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell1Text",
+                                    "type": TextWidget,
+                                    "title": 2024
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell2",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell2Text",
+                                    "type": TextWidget,
+                                    "title": 202401
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell3",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell3Text",
+                                    "type": TextWidget,
+                                    "title": 202402
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell4",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell4Text",
+                                    "type": TextWidget,
+                                    "title": 202403
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell5",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell5Text",
+                                    "type": TextWidget,
+                                    "title": 202404
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell6",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell6Text",
+                                    "type": TextWidget,
+                                    "title": 202405
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell7",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell7Text",
+                                    "type": TextWidget,
+                                    "title": 202406
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell8",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell8Text",
+                                    "type": TextWidget,
+                                    "title": 202407
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell9",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell9Text",
+                                    "type": TextWidget,
+                                    "title": 202408
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell10",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell10Text",
+                                    "type": TextWidget,
+                                    "title": 2024009
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell11",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell11Text",
+                                    "type": TextWidget,
+                                    "title": 202410
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell12",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell12Text",
+                                    "type": TextWidget,
+                                    "title": 202411
+                                }
+                            ]
+                        },
+                        {
+                            "id": "BusinessUnitGridTableHeaderRowCell13",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4%",
+                            "widgets": [
+                                {
+                                    "id": "BusinessUnitGridTableHeaderRowCell13Text",
+                                    "type": TextWidget,
+                                    "title": 202412
+                                }
+                            ]
                         }
                     ]
                 }
