@@ -155,12 +155,30 @@ KsAcademyHeadcountGridTable:{
     }
 },
 BusinessUnitGridTable:{
+    write: {
+        url: (db) => `/api/v1/Processes('zSYS Analogic Headcount Input')/tm1.ExecuteWithReturn`,
+        type: "POST",
+        server: true,
+        body: (ctx) => {
+                let cell = ctx.getCell();
+              return {
+                    value: ctx.getEventValues().value,
+                  employee: Utils.getGridTableCurrentCell('BusinessUnitGridTable').name,
+                  period:Utils.getGridTableCurrentCell('BusinessUnitGridTable').date,
+                    unit:v('systemValueSelectedUnit')
+                           };
+            },
+         callback() {
+                Api.updateContent("BusinessUnitGridTable");
+            }
+    },
     init: {
         url: (db) => `/api/v1/ExecuteMDX?$expand=Cells($select=Ordinal,FormattedValue,Consolidated;$expand=Members($select=Name, Attributes/UIName, Attributes/UILevel))`,
         type: "POST",
         server: true,
         body: (db) => {
-                return {            
+                return {  
+                    key:  v('systemValueSelectedValue') === 'Delta' ? 'BusinessUnitGridTable_delta_init' : 'BusinessUnitGridTable_init',
                     unit: v('systemValueSelectedUnit'),
                     number: v('systemValueSelectedUnitNumber'),
                     year : v('systemValueSelectedYear'),
@@ -198,9 +216,13 @@ BusinessUnitGridTable:{
                             c = {
                                 title: cells[i + k].FormattedValue,
                                 alignment: "center-left",
+                                 editable: v('systemValueSelectedValue') === 'Delta'  && i > 0? true : false,
+                                 cellBackgroundColor: v('systemValueSelectedValue') === 'Delta' && i > 0 ? '#FFFFFF' : '#F2F2F2',
+                                 name: cells[i + k].Members[4].Name,
+                                 date: cells[i + k].Members[5].Name,
                                 paddingLeft: '10px',
                                 skin: 'delta_report_data',
-                                cellWidth: '4%'
+                                cellWidth: '4%',                            
                             };
                             d.push(c);
                         }

@@ -47,5 +47,21 @@
      ON ROWS FROM [Headcount] WHERE ([Version].[Version].[Forecast], [Organization Unit].[Organization Unit].[$unit],
      [Lineitem Headcount].[Lineitem Headcount].[FTE], [Measure Headcount].[Measure Headcount].[$value])
    "}
+"BusinessUnitGridTable_write": >
+  {
+           "Parameters": [
+                {"Name": "pEmployee", "Value": "$employee"},
+                {"Name": "pOrgUnit", "Value": "$unit"},
+                {"Name": "pPeriod", "Value": "$period"},
+                {"Name": "pValue", "Value": "$value"}
+           ]
+       }
+"BusinessUnitGridTable_delta_init": >
+  {"MDX":"
+     SELECT {DRILLDOWNMEMBER({StrToSet(\"{[Period].[Period].[$year]}\")},
+     {[Period].[Period].[$year]})} ON COLUMNS, {StrToSet(\"{[Employee].[Employee].[BU$number]}\")}
+     ON ROWS FROM [Headcount] WHERE ([Version].[Version].[Forecast], [Organization Unit].[Organization Unit].[$unit],
+     [Lineitem Headcount].[Lineitem Headcount].[FTE], [Measure Headcount].[Measure Headcount].[$value])
+   "}
 
 
