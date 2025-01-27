@@ -18,14 +18,13 @@ KsAcademyHeadcountGridRow2Cell1Dropbox:{
         }
     },
      choose(){
-        Api.forceRefresh('KsAcademyHeadcountGridTable');
+        Api.forceRefresh('BusinessUnitGridTable');
         Utils.setWidgetValue('systemValueSelectedYear', v('KsAcademyHeadcountGridRow2Cell1Dropbox').value)
     }
 },
 KsAcademyHeadcountGridRow2aCell1Dropbox:{
     init: {
-        url: (db) =>
-           `/api/v1/ExecuteMDX?$expand=Cells($select=Ordinal,FormattedValue;$expand=Members($select=Name))`,
+        url: (db) => `/api/v1/ExecuteMDX?$expand=Cells($select=Ordinal,FormattedValue;$expand=Members($select=Name))`,
         type: "POST",
         server: true,
         body: (db) => {
@@ -36,19 +35,31 @@ KsAcademyHeadcountGridRow2aCell1Dropbox:{
         parsingControl: {
             type: "list",
             query: (r, x) => {
-                    Utils.setWidgetValueIfNotExist('systemValueSelectedUnit', r.Cells[0].Members[4].Name);
+                    let fullUnitName = r.Cells[x].Members[4].Name;
+                let fullUnitNameStart= r.Cells[0].Members[4].Name;
+                    Utils.setWidgetValue('systemValueSelectedUnit',fullUnitNameStart);
+
+                    let unitNumber = fullUnitNameStart.match(/\d+$/);
+                    if (unitNumber) {
+                        Utils.setWidgetValue('systemValueSelectedUnitNumber', unitNumber[0]);
+                    } else {
+                    }
+
                     return {
-                        name: r.Cells[x].Members[4].Name,
-                        on:  r.Cells[x].Members[4].Name === v('systemValueSelectedUnit')
+                        name: fullUnitName,
+                        on: fullUnitName === v('systemValueSelectedUnit')
                     };
                 }
         }
     },
-     choose(){
-        Api.forceRefresh('BusinessUnitGridTable');
-        Utils.setWidgetValue('systemValueSelectedUnit', v('KsAcademyHeadcountGridRow2aCell1Dropbox').value)
-          Utils.setWidgetValue('systemValueSelectedUnitNumber', v('systemValueSelectedUnitNumber'))
-    }
+     choose() {
+            Api.forceRefresh('BusinessUnitGridTable');
+            let currentUnit = v('KsAcademyHeadcountGridRow2aCell1Dropbox').value;
+            let unitNumber = currentUnit.match(/\d+$/)[0];
+
+            Utils.setWidgetValue('systemValueSelectedUnit', currentUnit);
+            Utils.setWidgetValue('systemValueSelectedUnitNumber', unitNumber);
+        }
 },
 KsAcademyHeadcountGridRow2Cell2Segmented:{
     init: {
@@ -76,7 +87,7 @@ KsAcademyHeadcountGridRow2Cell2Segmented:{
     switch: {
         execute: (db) => {
                 Utils.setWidgetValue("systemValueSelectedValue", v("KsAcademyHeadcountGridRow2Cell2Segmented").value);
-                    Api.updateContent('KsAcademyHeadcountGridTable');
+                    Api.updateContent('BusinessUnitGridTable');
                 
 
             }
@@ -149,7 +160,9 @@ BusinessUnitGridTable:{
         type: "POST",
         server: true,
         body: (db) => {
-                return {                
+                return {            
+                    unit: v('systemValueSelectedUnit'),
+                    number: v('systemValueSelectedUnitNumber'),
                     year : v('systemValueSelectedYear'),
                     value: v('systemValueSelectedValue')
                 };
@@ -204,10 +217,60 @@ BusinessUnitGridTable:{
         }
     }
 },
+BusinessUnitGridTableHeaderRowCell1Text:{
+     init(){
+        return{
+            title: v('systemValueSelectedYear')
+        }
+    }
+},
+BusinessUnitGridTableHeaderRowCell2Text:{
+     init(db,widgetId){
+         let index = parseInt(widgetId.split("Cell")[1]) - 1;
+        return{
+            title: v('systemValueSelectedYear') + index
+        }
+    }
+},
+BusinessUnitGridTableHeaderRowCell3Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell4Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell5Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell6Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell7Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell8Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell9Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell10Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell11Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell12Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
+BusinessUnitGridTableHeaderRowCell13Text:{
+    refernce: "BusinessUnitGridTableHeaderRowCell2Text"
+},
 KsAcademyMainPageGridRow2Cell2Button:{
      launch(){
         Api.openPage('KsAcademyHeadcount')
          Utils.setWidgetValue('systemValueSelectedYear', '2024')
+             Utils.setWidgetValue('systemValueSelectedUnit', 'Business Unit 1')
+         Utils.setWidgetValue('systemValueSelectedUnitNumber', '1')
           Utils.setWidgetValue('systemValueSelectedValue', 'Base')
          
          
