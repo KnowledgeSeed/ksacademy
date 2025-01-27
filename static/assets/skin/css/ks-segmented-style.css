@@ -1,0 +1,37 @@
+.ks-segmented-segmented.ks-segmented {
+    border-radius: 10px;
+    height: 40px;
+}
+
+.ks-segmented-segmented .ks-segment {
+    background-color: #ECEFF1;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ks-segmented-segmented .ks-segment.ks-on {
+    background-color: #007AFF;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.ks-segmented-segmented_left {
+    border-radius: 20px 8px 8px 20px;
+    margin-right: 1%;
+    font-size: 13px;
+}
+
+.ks-segmented-segmented_middle {
+    border-radius: 6px 6px 6px 6px;
+    background-color: #ECEFF1;
+    margin-right: 0.5%;
+    font-size: 13px;
+}
+
+.ks-segmented-segmented_right {
+    border-radius: 8px 20px 20px 8px;
+    margin-right: 1%;
+    font-size: 13px;
+}

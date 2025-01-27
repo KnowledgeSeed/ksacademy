@@ -22,6 +22,33 @@ KsAcademyHeadcountGridRow2Cell1Dropbox:{
         Utils.setWidgetValue('systemValueSelectedYear', v('KsAcademyHeadcountGridRow2Cell1Dropbox').value)
     }
 },
+KsAcademyHeadcountGridRow2Cell2Segmented:{
+    init: {
+        execute: (db) => {
+                let selectedValue = v("systemValueSelectedValue");
+            return [{
+                    label: "Base",
+                    selected: "Base" == selectedValue,
+                    value: "Base"
+                },   
+                          {
+                        label: "Delta",
+                        selected: "Delta" == selectedValue,
+                        value: "Delta"
+                    }
+                    
+                ];
+            }
+    },
+    switch: {
+        execute: (db) => {
+                Utils.setWidgetValue("systemValueSelectedValue", v("KsAcademyHeadcountGridRow2Cell2Segmented").value);
+                    Api.updateContent('KsAcademyHeadcountGridTable');
+                
+
+            }
+    }
+},
 KsAcademyHeadcountGridTable:{
     init: {
         url: (db) => `/api/v1/ExecuteMDX?$expand=Cells($select=Ordinal,FormattedValue,Consolidated;$expand=Members($select=Name, Attributes/UIName, Attributes/UILevel))`,
@@ -29,7 +56,8 @@ KsAcademyHeadcountGridTable:{
         server: true,
         body: (db) => {
                 return {
-                    year : v('systemValueSelectedYear')
+                    year : v('systemValueSelectedYear'),
+                    value: v('systemValueSelectedValue')
                 };
             },
         parsingControl: {
@@ -80,6 +108,15 @@ KsAcademyHeadcountGridTable:{
                     };
                 }
         }
+    }
+},
+KsAcademyMainPageGridRow2Cell2Button:{
+     launch(){
+        Api.openPage('KsAcademyHeadcount')
+         Utils.setWidgetValue('systemValueSelectedYear', '2024')
+          Utils.setWidgetValue('systemValueSelectedValue', 'Base')
+         
+         
     }
 }
 };

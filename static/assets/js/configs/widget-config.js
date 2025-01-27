@@ -53,6 +53,31 @@ KsAcademyHeadcount:{
                             "skin": "edit"
                         }
                     ]
+                },
+                {
+                    "id": "KsAcademyHeadcountGridRow2Cell2",
+                    "type": GridCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyHeadcountGridRow2Cell2Segmented",
+                            "type": SegmentedControlWidget,
+                            "skin": "segmented",
+                            "width": 300,
+                            "marginLeft": "5%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyHeadcountGridRow2Cell2SegmentedItem1",
+                                    "type": SegmentedControlItemWidget,
+                                    "skin": "segmented-left"
+                                },
+                                {
+                                    "id": "KsAcademyHeadcountGridRow2Cell2SegmentedItem2",
+                                    "type": SegmentedControlItemWidget,
+                                    "skin": "segmented-right"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -62,6 +87,7 @@ KsAcademyHeadcount:{
             "skin": "list_table",
             "width": "25%",
             "marginTop": 20,
+            "visible": true,
             "widgets": [
                 {
                     "id": "GridTableHeaderRow",

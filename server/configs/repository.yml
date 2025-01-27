@@ -1,3 +1,6 @@
+
+
+
 "KsAcademyHeadcountGridTable_init": >
   {"MDX":"
         WITH
@@ -13,7 +16,7 @@
           (
            [Version].[Version].[Actual],
            [Period].[Period].[$year],
-           [Measure Headcount].[Measure Headcount].[Base],
+           [Measure Headcount].[Measure Headcount].[$value],
            [Employee].[Employee].[}rollup_1]
           )
    "}
