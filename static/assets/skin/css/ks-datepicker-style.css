@@ -87,6 +87,7 @@
 }
 
 .ks-datepicker-monthpicker .ks-datepicker-panel-months {
+    display:none;
     border-bottom: 1px solid #eceff1;
     padding: 5px 0;
 }

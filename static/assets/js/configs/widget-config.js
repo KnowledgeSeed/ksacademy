@@ -50,7 +50,8 @@ KsAcademyHeadcount:{
                         {
                             "id": "KsAcademyHeadcountGridRow2Cell1Dropbox",
                             "type": DatePickerWidget,
-                            "skin": "monthpicker"
+                            "skin": "monthpicker",
+                            "width": 130
                         }
                     ]
                 },
@@ -550,9 +551,14 @@ KsAcademyMainPage:{
                 {
                     "id": "KsAcademyMainPageGridRow1Cell1",
                     "type": GridCellWidget,
-                    "width": "20%",
                     "alignment": "center-left",
                     "widgets": [
+                        {
+                            "id": "KsAcademyMainPageLogo",
+                            "type": ImageWidget,
+                            "fileName": "knowledgeseed_stratos_HD.png",
+                            "width": 150
+                        },
                         {
                             "id": "KsAcademyMainPageGridRow1Text",
                             "type": TextWidget,
