@@ -8,18 +8,15 @@ KsAcademyHeadcountGridRow1Cell1Button:{
     }
 },
 KsAcademyHeadcountGridRow2Cell1Dropbox:{
-     init(){
-        return{
-            items:[
-                {name:"2024", on: true},
-                {name: "2025"},
-                {name: "2026"}
-            ]
-        }
-    },
-     choose(){
-        Api.forceRefresh('BusinessUnitGridTable');
-        Utils.setWidgetValue('systemValueSelectedYear', v('KsAcademyHeadcountGridRow2Cell1Dropbox').value)
+     init() {
+            let selectedYear = v("systemValueSelectedYear");
+            return {
+                datePicked: selectedYear
+            };
+     },
+     pick(){
+         Utils.setWidgetValue('systemValueSelectedYear',(v('KsAcademyHeadcountGridRow2Cell1Dropbox').value.split('.')[0]) )
+        Api.forceRefresh('BusinessUnitGridTable')
     }
 },
 KsAcademyHeadcountGridRow2aCell1Dropbox:{
@@ -290,7 +287,7 @@ BusinessUnitGridTableHeaderRowCell13Text:{
 KsAcademyMainPageGridRow2Cell2Button:{
      launch(){
         Api.openPage('KsAcademyHeadcount')
-         Utils.setWidgetValue('systemValueSelectedYear', '2024')
+         Utils.setWidgetValue('systemValueSelectedYear', '2025')
              Utils.setWidgetValue('systemValueSelectedUnit', 'Business Unit 1')
          Utils.setWidgetValue('systemValueSelectedUnitNumber', '1')
           Utils.setWidgetValue('systemValueSelectedValue', 'Base')

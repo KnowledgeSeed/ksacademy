@@ -49,14 +49,15 @@ KsAcademyHeadcount:{
                     "widgets": [
                         {
                             "id": "KsAcademyHeadcountGridRow2Cell1Dropbox",
-                            "type": DropBoxWidget,
-                            "skin": "edit"
+                            "type": DatePickerWidget,
+                            "skin": "monthpicker"
                         }
                     ]
                 },
                 {
                     "id": "KsAcademyHeadcountGridRow2aCell1",
                     "type": GridCellWidget,
+                    "marginLeft": 10,
                     "widgets": [
                         {
                             "id": "KsAcademyHeadcountGridRow2aCell1Dropbox",
