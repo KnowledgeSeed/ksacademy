@@ -577,7 +577,60 @@ KsAcademyProductPlanning:{
             ]
         },
         {
+            "id": "KsAcademyProductPlanningRow2",
+            "type": GridRowWidget,
+            "paddingBottom": 27,
+            "marginTop": 28,
+            "widgets": [
+                {
+                    "id": "KsAcademyProductPlaningFitler1",
+                    "type": GridCellWidget,
+                    "width": "100%",
+                    "alignment": "center-left",
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlaningFitler1Filter",
+                            "type": ButtonWidget,
+                            "backgroundColor": "#EBECEC",
+                            "icon": "icon-globe-americas",
+                            "height": "40px",
+                            "marginRight": 10,
+                            "skin": "userpanelmain_medium",
+                            "width": 300,
+                            "marginLeft": 20
+                        },
+                        {
+                            "id": "KsAcademyProductPlaningFitler1Filter2",
+                            "type": ButtonWidget,
+                            "backgroundColor": "#EBECEC",
+                            "icon": "icon-arrow-left-arrow-right",
+                            "height": "40px",
+                            "marginRight": "10px",
+                            "skin": "userpanelmain_medium",
+                            "width": 300
+                        },
+                        {
+                            "id": "KsAcademyProductPlaningFitler1Filte3",
+                            "type": ButtonWidget,
+                            "backgroundColor": "#EBECEC",
+                            "icon": "icon-list-dash",
+                            "height": "40px",
+                            "marginRight": "10px",
+                            "skin": "userpanelmain_medium",
+                            "width": 300
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "import": "reusable.reusableGlobalCompanyPopup"
+        },
+        {
             "import": "reusable.seederMainSideBar"
+        },
+        {
+            "import": "reusable.reusableVersionPopup"
         }
     ]
 },
@@ -708,6 +761,80 @@ KsAcademyMainPage:{
     ]
 },
 reusable: {
+reusableGlobalCompanyPopup:{
+    "id": "reusableGlobalCompanyPopup",
+    "type": ContainerWidget,
+    "anchorOnClick": true,
+    "anchorVisible": false,
+    "backdrop": true,
+    "bgColor": "#fff",
+    "closeBtn": false,
+    "fadingSpeed": 0,
+    "heightFixed": false,
+    "positionAndCalculateBestSpace": "bottom",
+    "width": 270,
+    "visible": false,
+    "position": "center",
+    "offset": 30,
+    "widgets": [
+        {
+            "id": "reusableGlobalCompanyPopupSearch",
+            "type": TextBoxWidget,
+            "width": 250,
+            "skin": "searchbox"
+        },
+        {
+            "id": "reusableGlobalCompanyPopupGridTable",
+            "type": GridTableWidget,
+            "skin": "memberships",
+            "marginTop": 10,
+            "widgets": [
+                {
+                    "id": "reusableGlobalCompanyPopupGridTableCell0",
+                    "type": GridTableCellWidget,
+                    "alignment": "center-left",
+                    "widgets": [
+                        {
+                            "id": "reusableGlobalCompanyPopupGridTableCell0Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "reusableGlobalCompanyPopupGridTableCell1",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "reusableGlobalCompanyPopupGridTableCell1Text",
+                            "type": ToggleWidget
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+reusableVersionPopup:{
+    "id": "reusableVersionPopup",
+    "type": ContainerWidget,
+    "anchorOnClick": true,
+    "anchorVisible": false,
+    "backdrop": true,
+    "fadingSpeed": 0,
+    "heightFixed": false,
+    "fixed": false,
+    "positionAndCalculateBestSpace": "bottom",
+    "position": "center-center",
+    "visible": false,
+    "width": 270,
+    "widgets": [
+        {
+            "id": "reusableVersionPopupDropbox",
+            "type": DropBoxWidget,
+            "skin": "filter_icons"
+        }
+    ]
+},
 seederMainSideBar:{
     "id": "seederMainSideBar",
     "type": ContainerWidget,

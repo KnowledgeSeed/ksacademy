@@ -299,6 +299,69 @@ KsAcademyProductPlanningRow1Cell1Button:{
         Utils.openPopup('seederMainSideBar',ctx)
     }
 },
+KsAcademyProductPlaningFitler1Filter:{
+     launch(ctx) {
+        Utils.openPopup('reusableGlobalCompanyPopup', ctx);
+    },
+     init() {
+        return {
+            label: v('systemValueGlobalSelectedCountry') ?  `<b style=font-weight:normal>` + 'Country: '+ '</b>'  + v('systemValueGlobalSelectedCountry')  :  `<b style=font-weight:normal>` + 'Country: '+ '</b>'  + 'All',
+            iconStyle: {
+                margin_left: '-10px'
+            },
+            labelStyle: {
+                padding_right: '5px'
+            },
+            innerStyle: {
+                min_width: '240px',
+                display: 'flex'
+            },
+            visible: true
+        }
+    }
+},
+KsAcademyProductPlaningFitler1Filter2:{
+     launch(ctx) {
+        Utils.openPopup('reusableGlobalCompanyPopup', ctx);
+    },
+     init() {
+        return {
+            label: v('systemValueSelectedChannel') ?  `<b style=font-weight:normal>` + 'Channel: '+ '</b>'  + v('systemValueSelectedChannel')  :  `<b style=font-weight:normal>` + 'Channel: '+ '</b>'  + 'Channel Total',
+            iconStyle: {
+                margin_left: '-10px'
+            },
+            labelStyle: {
+                padding_right: '5px'
+            },
+            innerStyle: {
+                min_width: '240px',
+                display: 'flex'
+            },
+            visible: true
+        }
+    }
+},
+KsAcademyProductPlaningFitler1Filte3:{
+     launch(ctx) {
+        Utils.openPopup('reusableVersionPopup', ctx);
+    },
+     init() {
+        return {
+            label: v('systemValueGlobalSelectedVersion') ?  `<b style=font-weight:normal>` + 'Version: '+ '</b>'  + v('systemValueGlobalSelectedVersion')  :  `<b style=font-weight:normal>` + 'Version: '+ '</b>'  + 'Version Total',
+            iconStyle: {
+                margin_left: '-10px'
+            },
+            labelStyle: {
+                padding_right: '5px'
+            },
+            innerStyle: {
+                min_width: '240px',
+                display: 'flex'
+            },
+            visible: true
+        }
+    }
+},
 KsAcademyMainPageGridRow2Cell2Button:{
      launch(){
         Api.openPage('KsAcademyHeadcount')
@@ -313,6 +376,103 @@ KsAcademyMainPageGridRow2Cell2Button:{
 KsAcademyMainPageGridRow2Cell3Button:{
      launch(){
         Api.openPage('KsAcademyProductPlanning') 
+    }
+},
+reusableGlobalCompanyPopupGridTable:{
+    init: {
+        url: (db) => `/api/v1/ExecuteMDX?$expand=Cells($select=Ordinal,FormattedValue,Consolidated;$expand=Members($select=Name, Attributes/Country))`,
+        type: "POST",
+        server: true,
+        body: (db) => {
+                return {};
+            },
+        parsingControl: {
+            type: 'script',
+            script: (data, ctx, object) => {
+                    let result = [],
+                        k = 0, c,                     
+                        cells = data.Cells,
+                        members,
+                        cell;
+
+                    while (k < cells.length) {
+                        cell = cells[k];
+                        members = cell.Members;
+                        let d = [];
+
+                        c = {
+                            title: cell.FormattedValue,
+                            skin: 'cell_1_title',
+                            cellWidth: '80%',
+                            icon: k ? 'icon-badge-fill' : 'icon-globe-americas',
+                            principalName: members[0].Name,
+                            iconColor: k ? '#5AC8FA' : '#007AFF',
+                            paddingLeft: k ? 25 : 10,
+                            iconStyle: {
+                                display: 'flex'
+                            }
+                        }
+                        d.push(c);
+                        c = {
+                            icon: k ? '' : 'icon-chevron-down',
+                            iconOff: k ? '' : 'icon-chevron-right',
+                            cellWidth: '20%',
+                            skin: 'hierarchy_expander',
+                            cellSkin: 'no_border',
+                            paddingLeft: k ? 1 : 0,
+                            isGridTableHierarchyExpander: true,
+                            value: 1
+                        }
+                        d.push(c);
+                        k++;
+                        result.push(d);
+                    }
+                    return {
+                        content: result
+                    };
+                }
+        }
+    },
+     text_click(ctx) {
+        Utils.setWidgetValue('systemValueGlobalSelectedCountry', ctx.getCell().principalName);
+        Utils.closePopup('reusableGlobalCompanyPopup', ctx);
+        Api.forceRefreshWidgets(['KsAcademyProductPlaningFitler1Filter']);
+    }
+},
+reusableVersionPopupDropbox:{
+     choose(ctx) {
+         Utils.setWidgetValue('systemValueGlobalSelectedVersion', v('reusableVersionPopupDropbox').value);
+         Api.updateContent('KsAcademyProductPlaningFitler1Filte3');
+         Utils.closePopup('reusableVersionPopup',ctx)
+        },
+    init: {
+        url: (db) =>
+                `/api/v1/ExecuteMDX?$expand=Cells($select=Ordinal,FormattedValue;$expand=Members($select=Name, Attributes/Caption))`,
+        type: "POST",
+        server: true,
+        body: (db) => {
+                return {};
+            },
+        parsingControl: {
+            type: 'script',
+            script: (data) => {
+                    let items = [];
+                    Utils.setWidgetValueIfNotExist('systemValueGlobalSelectedVersion', data.Cells[0].Members[0].Name)
+            
+                    for (let i = 0; i < data.Cells.length; i++) {
+                        items.push({
+                            name: data.Cells[i].Members[0].Name,
+                            on: data.Cells[i].Members[0].Name === v('systemValueGlobalSelectedVersion')
+                        });
+                    }
+                    return {
+                        items: items,
+                    };
+                }
+        }
+    },
+     initFinished() {
+        Api.forceRefreshWidgets(['KsAcademyProductPlaningFitler1Filte3']);
     }
 },
 seederMainSideBarGridRow2Icon:{

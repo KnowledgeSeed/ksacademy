@@ -1,0 +1,52 @@
+/* hierarchy_expander */
+.ks-toggle-hierarchy_expander.ks-toggle .ks-toggle-icon-on {
+    color: #ACADAE;
+    cursor: pointer;
+    margin-left: -20px;
+    font-size: 40px;
+    order: 0;
+}
+
+.ks-toggle-hierarchy_expander.ks-toggle .ks-toggle-icon-off {
+    color: #ACADAE;
+    cursor: pointer;
+    font-size: 40px;
+    margin-left: -20px;
+    order: 0;
+}
+
+.ks-toggle-hierarchy_expander.ks-toggle {
+    height: 60px;
+}
+
+.ks-toggle-hierarchy_expanders.ks-toggle.ks-on {
+
+}
+
+.ks-toggle-hierarchy_expander .ks-toggle-icon span {
+    display: block;
+    margin-left: 15px;
+}
+
+.ks-toggle-hierarchy_expander.ks-toggle-label {
+    color: #000;
+    display: block;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.ks-toggle-hierarchy_expander.ks-toggle.ks-on .ks-toggle-icon-off {
+    display: none;
+}
+
+.ks-toggle-hierarchy_expander.ks-toggle .ks-toggle-icon-on {
+    display: none;
+}
+
+.ks-toggle-hierarchy_expander.ks-toggle .ks-toggle-icon-off {
+    display: block;
+}
+
+.ks-toggle-hierarchy_expander.ks-toggle.ks-on .ks-toggle-icon-on {
+    display: block;
+}

@@ -13,3 +13,29 @@
 .ks-button-main_blue .ks-button-content {
     height: 100%
 }
+/* user name_medium*/
+.ks-button-userpanelmain_medium.ks-button {
+    height: 30px;
+    padding: 1px;
+    border-radius: 6px;
+    background-color: #F2F2F2;
+}
+
+.ks-button-userpanelmain_medium .ks-button-inner {
+    background-color: #F2F2F2;
+    border-radius: 6px;
+    padding: 0 10px 0 10px;
+}
+
+.ks-button-userpanelmain_medium .ks-button-icon,
+.ks-button-userpanelmain_medium .ks-button-icon img {
+    float: left;
+    font-size: 40px;
+    color: #007AFF;
+}
+
+.ks-button-userpanelmain_medium .ks-button-label {
+    color: #585959;
+    font-size: 13px;
+    font-weight: bold;
+}

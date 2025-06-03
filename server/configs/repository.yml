@@ -62,3 +62,33 @@
        }
 
 
+"reusableGlobalCompanyPopupGridTable_init": >
+  {"MDX":"
+          With Member [}ElementAttributes_Organization Unit].[UI Name] as
+              iif ([Organization Unit].[Organization Unit].CurrentMember.Properties('Country')<>'',
+                  [Organization Unit].[Organization Unit].CurrentMember.Properties('Country'),
+                  [Organization Unit].[Organization Unit].CurrentMember.Name)
+            SELECT
+               {[}ElementAttributes_Organization Unit].[UI Name]}
+              ON COLUMNS ,
+               {[Organization Unit].[Organization Unit].Members}
+              ON ROWS
+            FROM [}ElementAttributes_Organization Unit]
+   "}
+
+
+"reusableVersionPopupDropbox_init": >
+  {"MDX":"
+          With Member [}ElementAttributes_Version].[UI Name] as
+              iif ([Version].[Version].CurrentMember.Properties('Country')<>'',
+                  [Version].[Version].CurrentMember.Properties('Country'),
+                  [Version].[Version].CurrentMember.Name)
+            SELECT
+               {[}ElementAttributes_Version].[UI Name]}
+              ON COLUMNS ,
+               {[Version].[Version].Members}
+              ON ROWS
+            FROM [}ElementAttributes_Version]
+   "}
+
+

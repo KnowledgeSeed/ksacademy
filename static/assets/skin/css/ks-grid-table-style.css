@@ -64,3 +64,28 @@
 .ks-grid-table-list_table .ks-grid-table-content .ks-grid-table-cell {
     overflow: hidden;
 }
+/*memberships*/
+
+
+.ks-grid-table-memberships .ks-grid-table-head {
+    display: none;
+}
+
+.ks-grid-table-memberships .ks-grid-table-content {
+    overflow-y: scroll;
+    max-height: 350px;
+}
+
+.ks-grid-table-memberships .ks-grid-table-row {
+    border-bottom: 0px solid #e3e4e4;
+    height: 40px;
+}
+
+.ks-grid-table-memberships .ks-grid-table-row:hover {
+    border-radius: 8px;
+    background-color: #007AFF33;
+}
+
+.ks-grid-table-memberships .ks-grid-table-cell {
+    padding: 0px !important;
+}

@@ -4,6 +4,7 @@
     height: 40px;
 }
 
+
 .ks-dropbox-edit .ks-dropbox-title {
     display: block;
     font-size: 14px;
@@ -114,4 +115,146 @@
     font-size: 40px;
     padding-left: 0px;
     color: #FF7600;
+}
+
+/*filter_icons dropbox */
+.ks-dropbox-filter_icons .ks-dropbox-field {
+    border-radius: 8px;
+    border: 1px solid #B1B3B3;
+    height: 40px;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-title {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    display: block;
+    text-align: left;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-input {
+    font-size: 16px;
+    float: right;
+    width: 85%;
+    margin-left: 20px;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-input::-webkit-input-placeholder {
+    color: #FFFFFF;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-input::-moz-placeholder {
+    color: #FFFFFF;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-input:-ms-input-placeholder {
+    color: #FFFFFF;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-input:-moz-placeholder {
+    color: #FFFFFF;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-icon {
+    display: flex;
+    float: left;
+    margin-right: 88%;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-icon:before {
+    width: 20px;
+    display: flex;
+    content: "\ecdd";
+    font-size: 40px;
+    font-family: 'analogic' !important;
+
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel {
+    border-radius: 5px;
+    margin-top: 2px;
+    padding: 2px;
+    overflow: hidden;
+    left: 8px;
+    right: 8px;
+    background-color: #fff;
+    display: block !important;
+    max-height: 1000px;
+    overflow-y: auto;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item {
+    border-radius: 8px;
+    width: 250px;
+    height: 40px;
+}
+.ks-dropbox-filter_icons .ks-dropbox-panel-item.on {
+    background-color: rgb(255, 255, 255);
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item:hover {
+    background-color: #E3F1FF;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item.on:hover {
+    background-color: #E3F1FF;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item-text {
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    display: contents;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item-text::before {
+    color: transparent;
+    content: "\e9d4";
+    font-family: 'analogic', serif !important;
+    margin-right: 10px;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.ks-dropbox-filter_icons  .ks-dropbox-panel-item.on .ks-dropbox-panel-item-text::before {
+    color: #007AFF;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel {
+    position: unset;
+    overflow: hidden;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-inner {
+    width: 145px;
+    float: left;
+}
+.ks-dropbox-filter_icons .ks-dropbox-panel-item-icon,
+.ks-dropbox-filter_icons .ks-dropbox-panel-item-separator {
+    display: block;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item-checkbox {
+    display: none;
+}
+
+
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item-icon {
+    display: contents;
+    color: #80379B;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item-checkbox {
+    display: none;
+}
+
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item-icon {
+    display: contents;
+    color: #80379B;
+}
+
+.ks-dropbox-filter_icons .ks-dropbox-panel-item-checkbox {
+    display: none;
 }

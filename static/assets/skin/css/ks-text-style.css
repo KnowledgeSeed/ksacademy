@@ -1,3 +1,29 @@
+.ks-text-cell_1_title .ks-text-inner {
+    display: flex;
+}
+
+.ks-text-cell_1_title .ks-text-title {
+    font-size: 13px;
+    align-content:center;
+    white-space: nowrap;
+    overflow: hidden;            /* Hides any overflow text */
+    text-overflow: ellipsis;     /* Adds the "..." when the text overflows */
+}
+
+.ks-text-cell_data_title .ks-text-title {
+    font-size: 13px;
+    align-content:center;
+    white-space: nowrap;
+    overflow: hidden;            /* Hides any overflow text */
+    text-overflow: ellipsis;     /* Adds the "..." when the text overflows */
+}
+
+.ks-text-cell_1_title .ks-text-icon {
+    font-size: 40px;
+    color: #007AFF;
+    order: 1 !important;
+}
+
 .ks-text-menu .ks-text-title{
     font-weight: 600;
     margin-bottom: 5px;
