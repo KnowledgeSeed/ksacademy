@@ -105,7 +105,7 @@ app.pingTime = new Date().getTime();
     
 
     
-        app['version'] = 'F8C63A';
+        app['version'] = 'EC986B';
     
 
     

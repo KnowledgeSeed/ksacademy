@@ -39,3 +39,97 @@
     font-size: 13px;
     font-weight: bold;
 }
+/* scroll_header */
+.ks-button-scroll_header .ks-button-label {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ks-button-scroll_header .ks-button-inner {
+    border-radius: 6px;
+}
+
+.ks-button-scroll_header .ks-button-content {
+    justify-content: flex-start !important;
+}
+
+.ks-button-scroll_header_fin_year_1 .ks-button-label {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ks-button-scroll_header_fin_year_1 .ks-button-inner {
+    border-radius: 6px 0 0 6px;
+}
+
+.ks-button-scroll_header_fin_year_1 .ks-button-content {
+    justify-content: flex-start !important;
+}
+
+.ks-button-scroll_header_fin_year_1.ks-button {
+   padding: 1px 0 0 0 !important;
+}
+
+.ks-button-scroll_header_fin_year_2.ks-button {
+   padding: 1px 0 0 0 !important;
+}
+
+.ks-button-scroll_header_fin_year_2 .ks-button-label {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ks-button-scroll_header_fin_year_2 .ks-button-icon span {
+    display: flex;
+    margin-top: -9px;
+}
+
+.ks-button-scroll_header_fin_year_2 .ks-button-inner {
+    border-radius: 0 6px 0 0;
+}
+
+.ks-button-scroll_header_fin_year_2 .ks-button-content {
+    justify-content: flex-start !important;
+}
+
+.ks-button-scroll_header_fin_year_3 .ks-button-icon span {
+    display: flex;
+    margin-top: -9px;
+}
+
+.ks-button-scroll_header_fin_year_3.ks-button {
+   padding: 1px 0 0 0 !important;
+}
+
+.ks-button-scroll_header_fin_year_3 .ks-button-label {
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ks-button-scroll_header_fin_year_3 .ks-button-inner {
+    border-radius: 0;
+}
+
+.ks-button-scroll_header_fin_year_3 .ks-button-content {
+    justify-content: flex-start !important;
+}

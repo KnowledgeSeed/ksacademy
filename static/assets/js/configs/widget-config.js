@@ -695,6 +695,159 @@ KsAcademyProductPlanning:{
             ]
         },
         {
+            "id": "KsAcademyProductPlanningGridTableCalendarYear",
+            "type": GridTableWidget,
+            "width": 1900,
+            "widgets": [
+                {
+                    "id": "KsAcademyProductPlanningGridTableCalendarYearCell0",
+                    "type": GridTableCellWidget,
+                    "alignment": "center-right",
+                    "height": 24,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCalendarYearCell0Text",
+                            "type": TextWidget,
+                            "marginRight": 16,
+                            "titleFontSize": 12,
+                            "titleFontColor": "#34C759",
+                            "titleFontWeight": 900
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCalendarYearCell1",
+                    "type": GridTableCellWidget,
+                    "height": 24,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCalendarYearCell1Text",
+                            "type": ButtonWidget,
+                            "skin": "scroll_header",
+                            "backgroundColor": "#34C75933",
+                            "height": "100%",
+                            "width": "100%",
+                            "applyMeasuresToSection": true,
+                            "fontSize": 12,
+                            "fontBold": true
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCalendarYearCell2",
+                    "type": GridTableCellWidget,
+                    "height": 24,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCalendarYearCell2Text",
+                            "type": ButtonWidget,
+                            "skin": "scroll_header",
+                            "backgroundColor": "#34C75933",
+                            "width": "100%",
+                            "height": "100%",
+                            "applyMeasuresToSection": true,
+                            "fontSize": 12,
+                            "fontBold": true
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCalendarYearCell3",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCalendarYearCell3Text",
+                            "type": TextWidget
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "KsAcademyProductPlanningGridTableFinancialYear",
+            "type": GridTableWidget,
+            "width": 1900,
+            "widgets": [
+                {
+                    "id": "KsAcademyProductPlanningGridTableFinancialYearCell0",
+                    "type": GridTableCellWidget,
+                    "height": 24,
+                    "alignment": "center-right",
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableFinancialYearCell0Text",
+                            "type": TextWidget,
+                            "marginRight": 16,
+                            "titleFontSize": 12,
+                            "titleFontWeight": 900,
+                            "titleFontColor": "#007AFF"
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableFinancialYearCell1",
+                    "type": GridTableCellWidget,
+                    "height": 24,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableFinancialYearCell1Text",
+                            "type": ButtonWidget,
+                            "backgroundColor": "#007AFF33",
+                            "height": "100%",
+                            "width": "100%",
+                            "applyMeasuresToSection": true,
+                            "fontColor": "#007AFF",
+                            "fontBold": true
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableFinancialYearCell3",
+                    "type": GridTableCellWidget,
+                    "height": 24,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableFinancialYearCell3Text",
+                            "type": ButtonWidget,
+                            "backgroundColor": "#007AFF33",
+                            "height": "100%",
+                            "width": "100%",
+                            "applyMeasuresToSection": true,
+                            "iconColor": "#007AFF",
+                            "iconFontSize": 40
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableFinancialYearCell2",
+                    "type": GridTableCellWidget,
+                    "height": 24,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableFinancialYearCell2Text",
+                            "type": ButtonWidget,
+                            "backgroundColor": "#007AFF33",
+                            "height": "100%",
+                            "width": "100%",
+                            "applyMeasuresToSection": true,
+                            "iconColor": "#007AFF",
+                            "iconFontSize": 40
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableFinancialYearCell7",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableFinancialYearCell7Text",
+                            "type": TextWidget
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "KsAcademyProductPlanningFilterPopup",
             "type": ContainerWidget,
             "anchorVisible": false,

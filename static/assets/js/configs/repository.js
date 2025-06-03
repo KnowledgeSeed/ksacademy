@@ -292,7 +292,78 @@ KsAcademyProductPlanning:{
          Utils.setWidgetValue('systemValueproductPriceRangeFilterValues', '');
          Utils.setWidgetValue('systemValueproductSizeFilterValues', '');
          Utils.setWidgetValue('systemValueproductWeightFilterValues', '');
-    }
+    },
+     setYearHelper() {
+            let yearHelper = {
+                fullYear: v('systemValueSavedYear').fullYear || new Date().getFullYear(),
+                year: v('systemValueSavedYear').year || new Date().getFullYear() - 2000,
+                currentFullYear: 2025,
+                currentYear: 25,
+                cellLength: 15,
+                increase() {
+                    this.fullYear++;
+                    this.year++;
+                    this.cellLength++;
+                },
+                decrease() {
+                    this.fullYear--;
+                    this.year--;
+                    this.cellLength--;
+                },
+                reset() {
+                    this.fullYear = 2025;
+                    this.year = 25;
+                    this.cellLength = 15;
+                },
+                getLabel() {
+                    return 'FY' + this.year;
+                },
+                getPreviousLabel() {
+                    return 'FY' + (this.year - 1);
+                },
+                getCalendarLabel() {
+                    return '20' + this.year;
+                },
+                getCalendarPreviousLabel() {
+                    return '20' + (this.year - 1);
+                },
+                convert(fyYear) {
+                    return Utils.parseNumber(fyYear.replace('FY', '').replace('20', ''));
+                },
+                isLastYear(fyYear) {
+                    return this.convert(fyYear) < this.currentYear && !this.isActualYear(fyYear);
+                },
+                isFirstYear(fyYear) {
+                    return this.convert(fyYear) === 21;
+                },
+                isActualYear(fyYear) {
+                    return this.convert(fyYear) === this.year;
+                },
+                getBackgroundColor(fyYear) {
+                    if (this.isFirstYear(fyYear)) {
+                        return {
+                            color: '#e9e9e9',
+                            skin: 'gray'
+                        };
+                    }
+                    if (!this.isActualYear(fyYear)) {
+                        return {
+                            color: 'rgba(204,236,248,0.5)',
+                            skin: ''
+                        };
+                    }
+                    return false;
+                },
+                isRewindVisible() {
+                    return this.year !== this.currentYear - 2;
+                },
+                isForwardVisible() {
+                    return this.year !== this.currentYear + 5;
+                }
+            };
+            Utils.setWidgetValue('systemValueProductPlanningYearHelper', yearHelper);
+            return yearHelper;
+        }
 },
 KsAcademyProductPlanningRow1Cell1Button:{
      launch(ctx){
@@ -423,6 +494,56 @@ KsAcademyProductPlanningRow4FilterGridTable:{
         if (ctx.getRow() === 1) {
             Utils.setWidgetValue(`systemValue${ctx.getCell().filterType}FilterValues`, '');
             Api.forceRefresh('KsAcademyProductPlanningRow4FilterGridTable');
+        }
+    }
+},
+KsAcademyProductPlanningGridTableCalendarYear:{
+     init() {
+            return [
+                [
+                    {title: 'Calendar Year', cellWidth: '18%'},
+                    {label: (v('systemValueProductPalnningSelectedYear') - 1) + '', cellWidth: '24.6%'},
+                    {label: v('systemValueProductPalnningSelectedYear') + '', cellWidth: '24.6%'},
+                    {title: '', cellWidth: '32.8%'}
+                ]
+            ];
+     }
+},
+KsAcademyProductPlanningGridTableFinancialYear:{
+     init() {
+                return [
+                [
+                    {title: 'Financial Year', cellWidth: '18%'},
+                    {
+                        label: 'FY' + (v('systemValueProductPalnningSelectedYear') - 2000),
+                        cellWidth: 49.3 + ((v('systemValueProductPalnningSelectedYear') - v('systemValueDefaultMinimumYear')) * 4.1) + '%',
+                        skin: 'scroll_header_fin_year_1'
+                    },
+                    {
+                        label: '',
+                        cellWidth: '2%',
+                        icon: v('systemValueProductPalnningSelectedYear') === v('systemValueDefaultMinimumYear') ? '' : 'icon-backward-fill',
+                        skin: 'scroll_header_fin_year_3'
+                    },
+                    
+                    {
+                        label: '',
+                        cellWidth: '2%',
+                        icon: v('systemValueProductPalnningSelectedYear') === v('systemValueDefaultMaximumYear') ? '' : 'icon-forward-fill',
+                        skin: 'scroll_header_fin_year_2'
+                    },
+                    {
+                        label: '',
+                        cellWidth: 28.7 - ((v('systemValueProductPalnningSelectedYear') - v('systemValueDefaultMinimumYear')) * 4.1) + '%',
+                    }
+                ]
+            ];
+        },
+     launch(ctx) {
+        if (ctx.getColumn() === 2) {
+            Utils.setWidgetValue('systemValueProductPalnningSelectedYear', v("systemValueProductPalnningSelectedYear") - 1);
+        } else if (ctx.getColumn() === 3) {
+            Utils.setWidgetValue('systemValueProductPalnningSelectedYear', v("systemValueProductPalnningSelectedYear") + 1);
         }
     }
 },
