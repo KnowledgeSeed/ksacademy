@@ -89,3 +89,95 @@
 .ks-grid-table-memberships .ks-grid-table-cell {
     padding: 0px !important;
 }
+
+/* assessment */
+
+.ks-grid-table-assessment .ks-grid-table-head {
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 2;
+}
+
+.ks-grid-table-assessment .ks-grid-table-row {
+    height: 40px;
+    border-bottom: 1px solid #E5E5EA;
+    border-right: 1px solid #b1b3b3;
+}
+
+.ks-grid-table-assessment .ks-grid-table-head .ks-grid-table-row {
+    border-right: 1px dashed #ffffff;
+}
+
+.ks-grid-table-assessment .ks-grid-table-cell-border-left {
+    border-left: 1px solid #B1B3B3;
+    position: absolute;
+    height: 100%;
+    margin-right: 7px;
+}
+
+.ks-grid-table-assessment .ks-grid-table-cell-no_border .ks-grid-table-cell-border-left {
+    border-left: 0px dashed #b1b3b3;
+    position: absolute;
+    height: 100%;
+    margin-right: 7px;
+}
+
+.ks-grid-table-assessment .ks-grid-table-head .ks-grid-table-head-cell-no_border .ks-grid-table-head-cell-border-left {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+}
+
+.ks-grid-table-assessment .ks-grid-table-cell-header_cell_selected_year {
+    height: 100%;
+    background-color: #007AFF33;
+    
+}
+
+.ks-grid-table-assessment .ks-grid-table-head .ks-grid-table-head-cell-header_cell_selected_year {
+    background-color: #007AFF33;
+    height: 100% !important;
+    top: 0 !important;
+}
+
+.ks-grid-table-assessment .ks-grid-table-cell-header_cell_total_year {
+    height: 100%;
+    background-color: #007AFF1A;
+}
+
+.ks-grid-table-assessment .ks-grid-table-head .ks-grid-table-head-cell-header_cell_total_year {
+    background-color: #007AFF1A;
+    height: 80%;
+    top: 20%;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.ks-grid-table-assessment .ks-grid-table-head .ks-grid-table-cell {
+    color: #000000;
+    height: 80%;
+    top: 20%;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.ks-grid-table-assessment .ks-grid-table-head .ks-grid-table-head-cell-border-left {
+    border-right: 1px solid #B1B3B3;
+    position: absolute;
+    top: 20%;
+    bottom: 0;
+}
+
+.ks-grid-table-assessment .ks-grid-table-head .ks-grid-table-row {
+    height: 40px;
+}
+
+.ks-grid-table-assessment .ks-grid-table-cell {
+    color: #333333;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.ks-grid-table-assessment .ks-grid-table-content .ks-grid-table-cell {
+    overflow: hidden;
+}

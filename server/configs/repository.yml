@@ -62,6 +62,39 @@
        }
 
 
+"KsAcademyProductPlanningGridTable_init": >
+  {"MDX":"
+          With Member [Period].[Period].[Price Range] as
+              [Product].[Product].CurrentMember.Properties('PriceRange')
+              Member [Period].[Period].[Package Size] as
+              [Product].[Product].CurrentMember.Properties('Size')
+              Member [Period].[Period].[Weight] as
+              [Product].[Product].CurrentMember.Properties('Weight')
+            SELECT
+               {[Period].[Period].[Price Range],[Period].[Period].[Package Size],[Period].[Period].[Weight],
+                [Period].[Period].[202401],[Period].[Period].[202402],[Period].[Period].[202403],[Period].[Period].[202404],[Period].[Period].[202405],[Period].[Period].[202406],
+                [Period].[Period].[202407],[Period].[Period].[202408],[Period].[Period].[202409],[Period].[Period].[202410],[Period].[Period].[202411],[Period].[Period].[202412],
+                [Period].[Period].[2024],[Period].[Period].[2025],[Period].[Period].[2026],[Period].[Period].[2027],[Period].[Period].[2027],[Period].[Period].[2027],[Period].[Period].[2027]}
+              ON COLUMNS ,
+              NON EMPTY
+               {[Product].[Product].Members}
+              ON ROWS
+            FROM [Sales]
+            WHERE
+              (
+              -- ezt dinamizaljatok mint version
+               [Version].[Version].[$version],
+               [Currency].[Currency].[LC],
+               [Measures Sales].[Measures Sales].[Value],
+               -- Ezt dinamizaljatok mint country
+               [Organization Unit].[Organization Unit].[$country],
+               -- ezt dinamizaljatok mint Key Accoutn manager es hagyjatok a sales channelt
+               [Employee].[Employee].[All Employee],
+               [Lineitem Sales].[Lineitem Sales].[Revenue]
+              )
+            "}
+
+
 "reusableGlobalCompanyPopupGridTable_init": >
   {"MDX":"
           With Member [}ElementAttributes_Organization Unit].[UI Name] as

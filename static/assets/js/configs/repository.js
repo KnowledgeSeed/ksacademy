@@ -540,11 +540,122 @@ KsAcademyProductPlanningGridTableFinancialYear:{
             ];
         },
      launch(ctx) {
-        if (ctx.getColumn() === 2) {
+        if (ctx.getColumn() === 2) {	reusableVersionPopupDropbox
             Utils.setWidgetValue('systemValueProductPalnningSelectedYear', v("systemValueProductPalnningSelectedYear") - 1);
+			Api.forceRefresh('KsAcademyProductPlanningGridTable');
         } else if (ctx.getColumn() === 3) {
             Utils.setWidgetValue('systemValueProductPalnningSelectedYear', v("systemValueProductPalnningSelectedYear") + 1);
+			Api.forceRefresh('KsAcademyProductPlanningGridTable');
         }
+    }
+},
+KsAcademyProductPlanningGridTable:{
+     init() {
+        if (v('systemValueGlobalSelectedVersion')) {
+            return new RestRequest(this.restRequest);
+        }
+        return [];
+    },
+    restRequest: {
+        url: (db) => `/api/v1/ExecuteMDX?$expand=Cells($select=Ordinal,Consolidated, FormattedValue;$expand=Members($select=Name))`,
+        type: "POST",
+        server: true,
+        body: (db) => {
+                return {
+                    country: v('systemValueGlobalSelectedCountry') ? v('systemValueGlobalSelectedCountry') : 'Group',
+                    version: v('systemValueGlobalSelectedVersion')
+                };
+            },
+        parsingControl: {
+            type: 'script',
+            script: (data) => {
+                let result = [],
+                k = 0, c,
+                cells = data.Cells,
+                members, cell, step = 22, padding, nextPadding, isN;
+    
+             while (k < cells.length) {
+                    cell = cells[k];
+                    members = cell.Members;
+                    let d = [];
+                    padding = Utils.parseNumber(cells[k + 5].FormattedValue, 'HU-hu');
+                    nextPadding = Utils.parseNumber(cells[k + step + 5]?.FormattedValue, 'HU-hu');
+                    isN = nextPadding <= padding || !nextPadding;
+
+                 if (v('systemValueproductPriceRangeFilterValues') && !v('systemValueproductPriceRangeFilterValues').split(',').includes(cell.FormattedValue) && cell.FormattedValue !== '') {
+                     k+=step;
+                     continue;
+                 }
+                 if (v('systemValueproductSizeFilterValues') && !v('systemValueproductSizeFilterValues').split(',').includes(cells[k + 1].FormattedValue) && cells[k + 1].FormattedValue !== '') {
+                     k+=step;
+                     continue;
+                 }
+                 if (v('systemValueproductWeightFilterValues') && !v('systemValueproductWeightFilterValues').split(',').includes(cells[k + 2].FormattedValue) && cells[k + 2].FormattedValue !== '') {
+                     k+=step;
+                     continue;
+                 }
+                    
+                c = {
+                    title: members[6].Name,
+                    cellWidth: '16%',
+                    skin: 'cell_1_title',
+                    paddingLeft: 0 * 10 + 15,
+                    isN: isN,
+                    productPriceRange: cell.FormattedValue,
+                    productSize: cells[k + 1].FormattedValue,
+                    productWeight: cells[k + 2].FormattedValue,
+                    ordinal: cell.Ordinal
+                }
+                d.push(c);
+    
+                c = {
+                    icon: isN ? '' : 'icon-chevron-down',
+                    iconOff: isN ? '' : 'icon-chevron-right',
+                    cellWidth: '2%',
+                    skin: 'hierarchy_expander',
+                    cellSkin: 'no_border',
+                    paddingLeft: 0,
+                    isGridTableHierarchyExpander: true,
+                    value: 0 > 2 ? 0 : 1
+                }
+                d.push(c);
+
+                 for (let i = 3; i < step; i++) {
+                     c = {
+                        title: Utils.parseNumber(cells[k + i].FormattedValue, 'hu-HU'),
+                        cellWidth: '4.1%'
+                    }
+
+                     if (i > 14 && i < 21) {
+                         c.cellSkin = v('systemValueProductPalnningSelectedYear') === Utils.parseNumber(cells[k + i].Members[7].Name) ? 'header_cell_selected_year' : 'header_cell_total_year'
+                     }
+                     
+                    d.push(c);
+                 }
+
+                 c = {cellWidth: '2%', icon: 'icon-comment-off', iconStyle: {font_size: '40px', color: '#C7C7CC'}};
+                 d.push(c)
+
+                 c = {cellWidth: '2%', icon: 'icon-doc-fill', iconStyle: {font_size: '40px', color: '#C7C7CC'}};
+                 d.push(c)
+    
+                k+=step;
+                result.push(d);
+             }    
+             return {content: result}
+            }
+        }
+    },
+     refreshFinished() {
+        Api.updateContent('KsAcademyProductPlanningGridTableCalendarYear');
+        Api.forceRefresh('KsAcademyProductPlanningGridTableFinancialYear');
+    },
+     updateContentFinished() {
+        Api.updateContent('KsAcademyProductPlanningGridTableCalendarYear');
+        Api.forceRefresh('KsAcademyProductPlanningGridTableFinancialYear');
+    },
+     getYearHelper() {
+        return v('systemValueProductPlanningYearHelper')
     }
 },
 KsAcademyProductPlanningFilterPopupDropbox:{
@@ -572,7 +683,9 @@ KsAcademyProductPlanningFilterPopupDropbox:{
      choose(ctx) {
         Utils.setWidgetValue(`systemValue${v('systemValueProductPlanningFilterType')}FilterValues`, v('KsAcademyProductPlanningFilterPopupDropbox').value);
          Api.forceRefresh('KsAcademyProductPlanningRow4FilterGridTable');
+		 Api.forceRefresh('KsAcademyProductPlanningGridTable');
          /*v('KsAcademyProductPlanningGridTable').updatedFromFilter = true;
+		
          Utils.setWidgetValue('systemValueProductPlanningGridTableFilteredContent', v('KsAcademyProductPlanningGridTable.cellData').filter(e => e[0][v('systemValueProductPlanningFilterType')] === '' || v(`systemValue${v('systemValueProductPlanningFilterType')}FilterValues`).split(',').includes(e[0][v('systemValueProductPlanningFilterType')])));*/
     }
 },
@@ -657,6 +770,7 @@ reusableVersionPopupDropbox:{
      choose(ctx) {
          Utils.setWidgetValue('systemValueGlobalSelectedVersion', v('reusableVersionPopupDropbox').value);
          Api.updateContent('KsAcademyProductPlaningFitler1Filte3');
+		 Api.forceRefresh('KsAcademyProductPlanningGridTable');
          Utils.closePopup('reusableVersionPopup',ctx)
         },
     init: {

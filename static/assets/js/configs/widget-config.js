@@ -848,6 +848,529 @@ KsAcademyProductPlanning:{
             ]
         },
         {
+            "id": "KsAcademyProductPlanningGridTable",
+            "type": GridTableWidget,
+            "width": 1900,
+            "skin": "assessment",
+            "widgets": [
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell0",
+                    "type": GridTableCellWidget,
+                    "width": "16%",
+                    "alignment": "center-left",
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell0Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell1",
+                    "type": GridTableCellWidget,
+                    "width": "2%",
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell1Text",
+                            "type": ToggleWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell2",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell2Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell3",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell3Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell4",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell4Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell5",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell5Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell6",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell6Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell7",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell7Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell8",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell8Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell9",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell9Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell10",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell10Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell11",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell11Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell12",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell12Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell13",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell13Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell14",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell14Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell15",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell15Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell16",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell16Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell17",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell17Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell18",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell18Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell19",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell19Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell20",
+                    "type": GridTableCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell20Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell21",
+                    "type": GridTableCellWidget,
+                    "width": "2%",
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell21Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableCell22",
+                    "type": GridTableCellWidget,
+                    "width": "2%",
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableCell22Text",
+                            "type": TextWidget
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningGridTableHeaderRow",
+                    "type": GridTableHeaderRowWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell0",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "16%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell0Text",
+                                    "type": TextWidget
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell1",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "2%",
+                            "cellHeaderSkin": "no_border",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell1Text",
+                                    "type": TextWidget
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell2",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell2Text",
+                                    "type": TextWidget,
+                                    "title": "Jul"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell3",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell3Text",
+                                    "type": TextWidget,
+                                    "title": "Aug"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell4",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell4Text",
+                                    "type": TextWidget,
+                                    "title": "Sep"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell5",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell5Text",
+                                    "type": TextWidget,
+                                    "title": "Oct"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell6",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell6Text",
+                                    "type": TextWidget,
+                                    "title": "Nov"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell7",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell7Text",
+                                    "type": TextWidget,
+                                    "title": "Dec"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell8",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell8Text",
+                                    "type": TextWidget,
+                                    "title": "Jan"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell9",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell9Text",
+                                    "type": TextWidget,
+                                    "title": "Feb"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell10",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell10Text",
+                                    "type": TextWidget,
+                                    "title": "Mar"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell11",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell11Text",
+                                    "type": TextWidget,
+                                    "title": "Apr"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell12",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell12Text",
+                                    "type": TextWidget,
+                                    "title": "May"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell13",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell13Text",
+                                    "type": TextWidget,
+                                    "title": "Jun"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell14",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell14Text",
+                                    "type": TextWidget,
+                                    "title": "FY24 Total"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell15",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell15Text",
+                                    "type": TextWidget,
+                                    "title": "FY25 Total"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell16",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell16Text",
+                                    "type": TextWidget,
+                                    "title": "FY26 Total"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell17",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell17Text",
+                                    "type": TextWidget,
+                                    "title": "FY27 Total"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell18",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell18Text",
+                                    "type": TextWidget,
+                                    "title": "FY28 Total"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell19",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell19Text",
+                                    "type": TextWidget,
+                                    "title": "FY29 Total"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell20",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "4.1%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell20Text",
+                                    "type": TextWidget,
+                                    "title": "YoY 24/23 ∆ %"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell21",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "2%",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell21Text",
+                                    "type": TextWidget
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningGridTableHeaderRowCell22",
+                            "type": GridTableHeaderCellWidget,
+                            "width": "2%",
+                            "cellHeaderSkin": "no_border",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningGridTableHeaderRowCell22Text",
+                                    "type": TextWidget
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": "KsAcademyProductPlanningFilterPopup",
             "type": ContainerWidget,
             "anchorVisible": false,
