@@ -624,6 +624,99 @@ KsAcademyProductPlanning:{
             ]
         },
         {
+            "id": "KsAcademyProductPlanningRow3",
+            "type": GridRowWidget,
+            "widgets": [
+                {
+                    "id": "KsAcademyProductPlanningRow3Cell1",
+                    "type": GridCellWidget,
+                    "marginLeft": 20,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningRow3Text1",
+                            "type": TextWidget,
+                            "title": "Filters",
+                            "titleFontWeight": 900,
+                            "titleFontSize": 13,
+                            "marginLeft": 15
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "KsAcademyProductPlanningRow4",
+            "type": GridRowWidget,
+            "widgets": [
+                {
+                    "id": "KsAcademyProductPlanningRow4FilterGridTable",
+                    "type": GridTableWidget,
+                    "width": "740px",
+                    "marginLeft": 20,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningRow4FilterGridTableCell0",
+                            "type": GridTableCellWidget,
+                            "width": "240px",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningRow4FilterGridTableCell0Text",
+                                    "type": TextWidget,
+                                    "skin": "filter_button_circle"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningRow4FilterGridTableCell1",
+                            "type": GridTableCellWidget,
+                            "width": "240px",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningRow4FilterGridTableCell1Text",
+                                    "type": TextWidget,
+                                    "skin": "filter_button_circle"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsAcademyProductPlanningRow4FilterGridTableCell2",
+                            "type": GridTableCellWidget,
+                            "width": "240px",
+                            "widgets": [
+                                {
+                                    "id": "KsAcademyProductPlanningRow4FilterGridTableCell2Text",
+                                    "type": TextWidget,
+                                    "skin": "filter_button_circle"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "KsAcademyProductPlanningFilterPopup",
+            "type": ContainerWidget,
+            "anchorVisible": false,
+            "anchorOnClick": true,
+            "backdrop": true,
+            "visible": false,
+            "width": 190,
+            "bgScrollable": true,
+            "fixed": true,
+            "heightFixed": false,
+            "fadingSpeed": 0,
+            "positionAndCalculateBestSpace": "bottom",
+            "widgets": [
+                {
+                    "id": "KsAcademyProductPlanningFilterPopupDropbox",
+                    "type": DropBoxWidget,
+                    "multiSelect": true,
+                    "skin": "filter_selector_pricerange"
+                }
+            ]
+        },
+        {
             "import": "reusable.reusableGlobalCompanyPopup"
         },
         {

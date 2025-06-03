@@ -362,6 +362,99 @@ KsAcademyProductPlaningFitler1Filte3:{
         }
     }
 },
+KsAcademyProductPlanningRow4FilterGridTable:{
+     init() {
+            let result = [
+                    [
+                        {
+                            title: 'Price Range',
+                            icon: 'icon-tag-fill',
+                            iconColor: '#007AFF',
+                            skin: v('systemValueproductPriceRangeFilterValues') ? 'filter_button' : 'filter_button_circle',
+                            filterType: 'productPriceRange'
+                        },
+                        {
+                            title: 'Package Size',
+                            icon: 'icon-cube',
+                            skin: v('systemValueproductSizeFilterValues') ?  'filter_button' : 'filter_button_circle',
+                            iconColor: '#34C759',
+                            filterType: 'productSize'
+                        },
+                        {
+                            title: 'Weight',
+                            icon: 'icon-weight-fill',
+                            skin: v('systemValueproductWeightFilterValues') ? 'filter_button' : 'filter_button_circle',
+                            iconColor: '#FF9500',
+                            filterType: 'productWeight'
+                        }
+                    ],
+                    [
+                        {
+                            title: v('systemValueproductPriceRangeFilterValues'),
+                            skin: v('systemValueproductPriceRangeFilterValues') ? 'filter_text' : 'filter_text_disabled',
+                            icon: '',
+                            filterType: 'productPriceRange'
+                        },
+                        {
+                            title: v('systemValueproductSizeFilterValues'),
+                            skin: v('systemValueproductSizeFilterValues') ? 'filter_text' : 'filter_text_disabled',
+                            icon: '',
+                            filterType: 'productSize'
+                        },
+                        {
+                            title: v('systemValueproductWeightFilterValues'),
+                            skin: v('systemValueproductWeightFilterValues') ? 'filter_text' : 'filter_text_disabled',
+                            icon: '',
+                            filterType: 'productWeight'
+                        }
+                    ]
+                ];
+                return result;
+        },
+     text_click(ctx) {
+        if (ctx.getRow() === 0) {
+            Utils.setWidgetValue('systemValueProductPlanningFilterType', ctx.getCell().filterType);
+            Api.forceRefresh('KsAcademyProductPlanningFilterPopupDropbox').then(() => {
+                Utils.openPopup("KsAcademyProductPlanningFilterPopup", ctx);
+            })
+        }
+    },
+     perform(ctx) {
+        if (ctx.getRow() === 1) {
+            Utils.setWidgetValue(`systemValue${ctx.getCell().filterType}FilterValues`, '');
+            Api.forceRefresh('KsAcademyProductPlanningRow4FilterGridTable');
+        }
+    }
+},
+KsAcademyProductPlanningFilterPopupDropbox:{
+     init() {
+         let filters = {productSize: [
+             {name: 'S', on: v('systemValueproductSizeFilterValues') && v('systemValueproductSizeFilterValues').includes('S')},
+             {name: 'M', on: v('systemValueproductSizeFilterValues') && v('systemValueproductSizeFilterValues').includes('M')},
+             {name: 'L', on: v('systemValueproductSizeFilterValues') && v('systemValueproductSizeFilterValues').includes('L')},
+             {name: 'XL', on: v('systemValueproductSizeFilterValues') && v('systemValueproductSizeFilterValues').includes('XL')}
+         ], productPriceRange: [
+                {name: '0-10', on: v('systemValueproductPriceRangeFilterValues') && v('systemValueproductPriceRangeFilterValues').includes('0-10')},
+                {name: '11-50', on: v('systemValueproductPriceRangeFilterValues') && v('systemValueproductPriceRangeFilterValues').includes('11-50')},
+                {name: '50-100', on: v('systemValueproductPriceRangeFilterValues') && v('systemValueproductPriceRangeFilterValues').includes('50-100')},
+                {name: '100-200', on: v('systemValueproductPriceRangeFilterValues') && v('systemValueproductPriceRangeFilterValues').includes('100-200')},
+            ], productWeight: [
+                 {name: '0-0.5', on: v('systemValueproductWeightFilterValues') && v('systemValueproductWeightFilterValues').includes('0-0.5')},
+                 {name: '0.51-1', on: v('systemValueproductWeightFilterValues') && v('systemValueproductWeightFilterValues').includes('0.51-1')},
+                 {name: '1-1.5', on: v('systemValueproductWeightFilterValues') && v('systemValueproductWeightFilterValues').includes('1-1.5')},
+                 {name: '1.51-3', on: v('systemValueproductWeightFilterValues') && v('systemValueproductWeightFilterValues').includes('1.51-3')}
+             ]};
+        return {
+            items: v('systemValueProductPlanningFilterType') ? filters[v('systemValueProductPlanningFilterType')] : []
+        }
+    },
+     choose(ctx) {
+        Utils.setWidgetValue(`systemValue${v('systemValueProductPlanningFilterType')}FilterValues`, v('KsAcademyProductPlanningFilterPopupDropbox').value);
+         Api.forceRefresh('KsAcademyProductPlanningRow4FilterGridTable');
+         /*v('KsAcademyProductPlanningGridTable').updatedFromFilter = true;
+         Utils.setWidgetValue('systemValueProductPlanningGridTableFilteredContent', v('KsAcademyProductPlanningGridTable.cellData').filter(e => e[0][v('systemValueProductPlanningFilterType')] === '' || v(`systemValue${v('systemValueProductPlanningFilterType')}FilterValues`).split(',').includes(e[0][v('systemValueProductPlanningFilterType')])));*/
+    }
+},
 KsAcademyMainPageGridRow2Cell2Button:{
      launch(){
         Api.openPage('KsAcademyHeadcount')

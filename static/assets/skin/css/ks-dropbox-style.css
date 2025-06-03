@@ -258,3 +258,105 @@
 .ks-dropbox-filter_icons .ks-dropbox-panel-item-checkbox {
     display: none;
 }
+
+/*pricerange dropbox */
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-field {
+    border: 1px solid #A9A9A9;
+    border-radius: 8px;
+    height: 40px;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-title {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-input {
+    font-size: 16px;
+    padding: 0 10px;
+    float: right;
+    width: 85%;
+    margin-left: 20px;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-input::-webkit-input-placeholder {
+    color: #FFFFFF;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-input::-moz-placeholder {
+    color: #FFFFFF;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-input:-ms-input-placeholder {
+    color: #FFFFFF;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-input:-moz-placeholder {
+    color: #FFFFFF;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-icon {
+    display: flex;
+    float: left;
+    margin-right: 140px;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-icon:before {
+    width: 20px;
+    display: flex;
+    content: "\ecdd";
+    font-family: analogic;
+    margin-top: 10px;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel {
+    border-radius: 5px;
+    margin-top: 2px;
+    padding: 2px;
+    left: 8px;
+    right: 8px;
+    background-color: #fff;
+    display: block !important;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel-item {
+    border-radius: 4px;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel-item:hover {
+    background-color: rgba(220, 235, 250, 0.5);
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel-item.on:hover {
+    background-color: rgba(220, 235, 250, 0.5);
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel-item-separator {
+    width: 10px;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel-item-text {
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel-item-icon,
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel-item-separator {
+    display: block;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel {
+    position: unset;
+}
+
+.ks-dropbox-filter_selector_pricerange .ks-dropbox-panel-inner {
+    width: 190px;
+    float: left;
+}
