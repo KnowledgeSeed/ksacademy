@@ -63,3 +63,108 @@
     justify-content: end;
     color: #0B41CD;
 }
+
+.ks-text-panel_menu .ks-text-inner {
+    height: 40px;
+    cursor: pointer;
+    padding-top: 2px;
+    background: transparent linear-gradient(180deg, #0076FF 0%, #00BAFF 80%, #00BAFF 100%) 0% 0% no-repeat padding-box;
+    width: 40px;
+    border-radius: 9px;
+    opacity: 1;
+
+}
+
+.ks-text-panel_menu .ks-text-title {
+    font-weight: normal;
+    color: #747678;
+    font-size: 14px;
+    padding: 5px;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+
+.ks-text-panel_menu .ks-text-icon {
+    color: #FFFFFF;
+    font-size: 40px;
+    float: left;
+    position: relative;
+    height: 40px;
+}
+
+.ks-text-slide_menu .ks-text-title {
+    margin-bottom: 5px;
+    margin-left: -17px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ks-text-slide_menu .ks-text-inner {
+    margin-left: 18px;
+}
+
+.ks-text-menu-list .ks-text-inner {
+    height: 40px;
+    cursor: pointer;
+    padding-top: 2px;
+    background-color: transparent;
+    width: 40px;
+    border-radius: 8px;
+    opacity: 1;
+
+}
+
+.ks-text-menu-list .ks-text-title {
+    font-weight: normal;
+    color: #747678;
+    font-size: 14px;
+    padding: 5px;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+
+.ks-text-menu-list .ks-text-icon {
+    color: #007AFF;
+    font-size: 60px;
+    float: left;
+    position: relative;
+    margin-top: -17px;
+    height: 40px;
+    margin-left: -10px;
+}
+.ks-text-menu-side-bar .ks-text-inner {
+    height: 40px;
+    cursor: pointer;
+    padding-top: 2px;
+    background-color: transparent;
+    width: 40px;
+    border-radius: 8px;
+    opacity: 1;
+
+}
+
+.ks-text-menu-side-bar .ks-text-title {
+    font-weight: normal;
+    color: #747678;
+    font-size: 14px;
+    padding: 5px;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+
+.ks-text-menu-side-bar .ks-text-icon {
+    color: #007AFF;
+    font-size: 60px;
+    float: left;
+    position: relative;
+    height: 40px;
+    margin-top: -15px;
+    margin-left: -9px;
+}

@@ -294,6 +294,11 @@ KsAcademyProductPlanning:{
          Utils.setWidgetValue('systemValueproductWeightFilterValues', '');
     }
 },
+KsAcademyProductPlanningRow1Cell1Button:{
+     launch(ctx){
+        Utils.openPopup('seederMainSideBar',ctx)
+    }
+},
 KsAcademyMainPageGridRow2Cell2Button:{
      launch(){
         Api.openPage('KsAcademyHeadcount')
@@ -309,5 +314,48 @@ KsAcademyMainPageGridRow2Cell3Button:{
      launch(){
         Api.openPage('KsAcademyProductPlanning') 
     }
+},
+seederMainSideBarGridRow2Icon:{
+     perform(ctx) {
+            Repository.seederMainSideBarGridRow2Icon.getEvent(ctx)
+        },
+     getEvent(ctx) {
+            Utils.closePopup("seederMainSideBar", ctx);
+            Api.openPage("KsAcademyMainPage");
+        }
+},
+seederMainSideBarGridRow2Title:{
+     text_click(ctx) {
+            Repository.seederMainSideBarGridRow2Icon.getEvent(ctx)
+        }
+},
+seederMainSideBarGridRow3Icon:{
+     perform(ctx) {
+            Repository.seederMainSideBarGridRow3Icon.getEvent(ctx)
+        },
+     getEvent(ctx) {
+            Utils.closePopup("seederMainSideBar", ctx);
+            Api.openPage('KsAcademyHeadcount');
+        }
+},
+seederMainSideBarGridRow3Title:{
+     text_click(ctx) {
+            Repository.seederMainSideBarGridRow3Icon.getEvent(ctx)
+        }
+},
+seederMainSideBarGridRow4Icon:{
+     perform(ctx) {
+            Repository.seederMainSideBarGridRow4Icon.getEvent(ctx);
+        },
+     getEvent(ctx) {
+            Utils.closePopup("seederMainSideBar", ctx);
+			Api.openPage('KsAcademyProductPlanning');
+             
+        }
+},
+seederMainSideBarGridRow4Title:{
+     text_click(ctx) {
+            Repository.seederMainSideBarGridRow4Icon.getEvent(ctx);
+        }
 }
 };

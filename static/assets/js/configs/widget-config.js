@@ -575,6 +575,9 @@ KsAcademyProductPlanning:{
                     ]
                 }
             ]
+        },
+        {
+            "import": "reusable.seederMainSideBar"
         }
     ]
 },
@@ -703,6 +706,121 @@ KsAcademyMainPage:{
             ]
         }
     ]
+},
+reusable: {
+seederMainSideBar:{
+    "id": "seederMainSideBar",
+    "type": ContainerWidget,
+    "visible": false,
+    "backdrop": true,
+    "width": "420px",
+    "closeBtn": false,
+    "height": "100%",
+    "behaviour": "popup",
+    "position": "left",
+    "bgColor": "#fff",
+    "widgets": [
+        {
+            "id": "seederMainSideBarGrid",
+            "type": GridWidget,
+            "widgets": [
+                {
+                    "id": "seederMainSideBarGridRow1",
+                    "type": GridRowWidget,
+                    "skin": "panel_menu_close_row",
+                    "widgets": [
+                        {
+                            "id": "seederMainSideBarGridRow1Icon",
+                            "type": TextWidget,
+                            "skin": "menu-side-bar",
+                            "titleCursor": "pointer",
+                            "icon": "icon-sidebar-icons-left"
+                        },
+                        {
+                            "id": "seederMainSideBarGridRow1Title",
+                            "type": TextWidget,
+                            "skin": "slide_menu",
+                            "titleCursor": "pointer",
+                            "marginLeft": 10,
+                            "marginTop": 10,
+                            "title": "Close",
+                            "titleFontColor": "#FFFFFF"
+                        }
+                    ]
+                },
+                {
+                    "id": "seederMainSideBarGridRow2",
+                    "type": GridRowWidget,
+                    "skin": "panel_menu_row",
+                    "widgets": [
+                        {
+                            "id": "seederMainSideBarGridRow2Icon",
+                            "type": TextWidget,
+                            "skin": "menu-list",
+                            "titleCursor": "pointer",
+                            "icon": "icon-square-grid-12-fill"
+                        },
+                        {
+                            "id": "seederMainSideBarGridRow2Title",
+                            "type": TextWidget,
+                            "marginLeft": "10px",
+                            "skin": "slide_menu",
+                            "titleCursor": "pointer",
+                            "marginTop": "10px",
+                            "title": "Main Menu"
+                        }
+                    ]
+                },
+                {
+                    "id": "seederMainSideBarGridRow3",
+                    "type": GridRowWidget,
+                    "skin": "panel_menu_row",
+                    "widgets": [
+                        {
+                            "id": "seederMainSideBarGridRow3Icon",
+                            "type": TextWidget,
+                            "titleCursor": "pointer",
+                            "skin": "panel_menu",
+                            "icon": "icon-square-grid-9-square"
+                        },
+                        {
+                            "id": "seederMainSideBarGridRow3Title",
+                            "type": TextWidget,
+                            "marginLeft": "10px",
+                            "skin": "slide_menu",
+                            "titleCursor": "pointer",
+                            "marginTop": 13,
+                            "title": "Headcount"
+                        }
+                    ]
+                },
+                {
+                    "id": "seederMainSideBarGridRow4",
+                    "type": GridRowWidget,
+                    "skin": "panel_menu_row",
+                    "widgets": [
+                        {
+                            "id": "seederMainSideBarGridRow4Icon",
+                            "type": TextWidget,
+                            "titleCursor": "pointer",
+                            "skin": "panel_menu",
+                            "icon": "icon-rectangle-stack"
+                        },
+                        {
+                            "id": "seederMainSideBarGridRow4Title",
+                            "type": TextWidget,
+                            "marginLeft": "10px",
+                            "skin": "slide_menu",
+                            "titleCursor": "pointer",
+                            "marginTop": 13,
+                            "title": "Product Planing"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
 },
 
 };

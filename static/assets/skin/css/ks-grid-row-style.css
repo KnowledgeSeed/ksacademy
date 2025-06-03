@@ -5,3 +5,11 @@
 .ks-grid-row-bottom_border_main3.ks-grid-row{
     border-bottom: 3px solid #D8D9D9;
 }
+.ks-grid-row-panel_menu_row.ks-grid-row {
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.ks-grid-row-panel_menu_row.ks-grid-row:hover {
+	background-color: #007AFF1A;
+}
