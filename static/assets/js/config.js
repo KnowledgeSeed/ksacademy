@@ -69,7 +69,7 @@ app.pingTime = new Date().getTime();
     
 
     
-        app['connectedSeederApplicationVersion'] = 'ksacademy_3.0';
+        app['connectedSeederApplicationVersion'] = 'ksacademy_4.0';
     
 
     
@@ -105,7 +105,7 @@ app.pingTime = new Date().getTime();
     
 
     
-        app['version'] = 'D6BCB2';
+        app['version'] = '44B667';
     
 
     

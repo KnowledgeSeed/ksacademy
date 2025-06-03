@@ -1,18 +1,15 @@
-.ks-button-main_blue.ks-button{
+.ks-button-main_blue.ks-button {
     height: 145px;
-    background-color: #0066CC;
+    background-color: #007AFF;
     border-radius: 30px;
 }
 
-.ks-button-main_blue .ks-button-icon{
+.ks-button-main_blue .ks-button-icon {
     color: white;
-    font-size: 100px; 
+    margin-bottom: 20px;
+    font-size: 160px;
 }
 
-.ks-button-main_blue .ks-button-content{
+.ks-button-main_blue .ks-button-content {
     height: 100%
-}
-
-.ks-button-main_blue:active{
-    background-color: #0066CC;
 }

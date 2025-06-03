@@ -537,6 +537,47 @@ KsAcademyHeadcount:{
         }
     ]
 },
+KsAcademyProductPlanning:{
+    "id": "KsAcademyProductPlanning",
+    "type": PageWidget,
+    "widgets": [
+        {
+            "id": "KsAcademyProductPlanningRow1",
+            "type": GridRowWidget,
+            "skin": "bottom_border_main",
+            "marginBottom": 20,
+            "widgets": [
+                {
+                    "id": "KsAcademyProductPlanningRow1Cell1",
+                    "type": GridCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningRow1Cell1Button",
+                            "type": ButtonWidget,
+                            "icon": "icon-sidebar-icons-left",
+                            "iconFontSize": 60,
+                            "iconColor": "#007AFF"
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyProductPlanningRow1Cell2",
+                    "type": GridCellWidget,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyProductPlanningRow1Cell2Text",
+                            "type": TextWidget,
+                            "title": "Product Planning",
+                            "titleFontSize": 36,
+                            "skin": "menu2",
+                            "titleFontWeight": 900
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
 KsAcademyMainPage:{
     "id": "KsAcademyMainPage",
     "type": PageWidget,
@@ -593,7 +634,23 @@ KsAcademyMainPage:{
                             "type": ButtonWidget,
                             "width": 145,
                             "height": 145,
-                            "icon": "icon-product-groups",
+                            "icon": "icon-square-grid-9-square",
+                            "skin": "main_blue"
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyMainPageGridRow2Cell3",
+                    "type": GridCellWidget,
+                    "width": "12%",
+                    "height": 20,
+                    "widgets": [
+                        {
+                            "id": "KsAcademyMainPageGridRow2Cell3Button",
+                            "type": ButtonWidget,
+                            "width": 145,
+                            "height": 145,
+                            "icon": "icon-rectangle-stack",
                             "skin": "main_blue"
                         }
                     ]
@@ -620,6 +677,23 @@ KsAcademyMainPage:{
                             "id": "KsAcademyMainPageGridRow3Cell2Text",
                             "type": TextWidget,
                             "title": "Headcount",
+                            "titleAlignment": "center",
+                            "titleFontColor": "#000",
+                            "skin": "menu"
+                        }
+                    ]
+                },
+                {
+                    "id": "KsAcademyMainPageGridRow3Cell3",
+                    "type": GridCellWidget,
+                    "width": "12%",
+                    "height": "6%",
+                    "marginTop": "2%",
+                    "widgets": [
+                        {
+                            "id": "KsAcademyMainPageGridRow3Cell3Text",
+                            "type": TextWidget,
+                            "title": "Product Planning",
                             "titleAlignment": "center",
                             "titleFontColor": "#000",
                             "skin": "menu"

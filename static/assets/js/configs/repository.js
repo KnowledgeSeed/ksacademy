@@ -284,6 +284,16 @@ BusinessUnitGridTableHeaderRowCell12Text:{
 BusinessUnitGridTableHeaderRowCell13Text:{
     refernce: "BusinessUnitGridTableHeaderRowCell2Text"
 },
+KsAcademyProductPlanning:{
+     init() {
+         Utils.setWidgetValue('systemValueProductPalnningSelectedYear', 2024);
+         Utils.setWidgetValue('systemValueDefaultMinimumYear', 2024);
+         Utils.setWidgetValue('systemValueDefaultMaximumYear', 2029);
+         Utils.setWidgetValue('systemValueproductPriceRangeFilterValues', '');
+         Utils.setWidgetValue('systemValueproductSizeFilterValues', '');
+         Utils.setWidgetValue('systemValueproductWeightFilterValues', '');
+    }
+},
 KsAcademyMainPageGridRow2Cell2Button:{
      launch(){
         Api.openPage('KsAcademyHeadcount')
@@ -293,6 +303,11 @@ KsAcademyMainPageGridRow2Cell2Button:{
           Utils.setWidgetValue('systemValueSelectedValue', 'Base')
          
          
+    }
+},
+KsAcademyMainPageGridRow2Cell3Button:{
+     launch(){
+        Api.openPage('KsAcademyProductPlanning') 
     }
 }
 };
